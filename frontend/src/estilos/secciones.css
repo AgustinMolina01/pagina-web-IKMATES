@@ -10,7 +10,7 @@
 .section-head { text-align: center; margin-bottom: 46px; }
 .section-head h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 8px; }
 .section-head p:last-child { color: var(--muted); }
-.eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem; font-weight: 600; color: var(--caramelo); margin-bottom: 14px; }
+.eyebrow { display: inline-block; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem; font-weight: 600; color: var(--brown-d); border-bottom: 1px solid var(--caramelo); padding-bottom: 4px; margin-bottom: 14px; }
 
 @media (max-width: 860px) {
   .section { padding: 64px 0; }

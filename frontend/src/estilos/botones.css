@@ -9,8 +9,8 @@
 .btn.full { width: 100%; }
 .btn-sm { padding: 10px 20px; font-size: 0.88rem; }
 
-.btn-primary { background: var(--brown); color: #fff; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22); }
-.btn-primary:hover { background: var(--brown-d); }
+.btn-primary { background: var(--brown-d); color: var(--paper); border: 1px solid var(--caramelo); box-shadow: 0 6px 18px rgba(52, 70, 56, 0.2); }
+.btn-primary:hover { background: var(--brown); color: var(--paper); }
 .btn-ghost { border: 1.5px solid var(--brown); color: var(--brown-d); }
 .btn-ghost:hover { background: var(--cream); }
 

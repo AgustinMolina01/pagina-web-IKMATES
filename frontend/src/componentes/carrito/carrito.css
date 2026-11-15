@@ -4,9 +4,9 @@
   color: var(--brown-d); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s;
 }
 .cart-btn:hover { background: var(--cream); }
-.cart-count { min-width: 20px; height: 20px; border-radius: 10px; background: var(--brown); color: #fff; font-size: 0.7rem; display: grid; place-items: center; padding: 0 5px; font-weight: 600; letter-spacing: 0; }
+.cart-count { min-width: 20px; height: 20px; border-radius: 10px; background: var(--caramelo); color: var(--brown-d); font-size: 0.7rem; display: grid; place-items: center; padding: 0 5px; font-weight: 600; letter-spacing: 0; }
 
-.overlay { position: fixed; inset: 0; background: rgba(28, 23, 18, 0.5); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 60; }
+.overlay { position: fixed; inset: 0; background: rgba(23, 50, 77, 0.5); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 60; }
 .overlay.show { opacity: 1; pointer-events: auto; }
 .drawer {
   position: fixed; top: 0; right: 0; height: 100%; width: min(440px, 100%); background: var(--paper); z-index: 70;
@@ -18,7 +18,7 @@
 .drawer-head button { font-size: 1.2rem; width: 36px; height: 36px; border-radius: 50%; }
 .drawer-head button:hover { background: var(--cream); }
 .drawer-body { flex: 1; overflow: auto; padding: 12px 24px 20px; }
-.drawer-foot { padding: 16px 24px 20px; border-top: 1px solid var(--line); background: #fff; }
+.drawer-foot { padding: 16px 24px 20px; border-top: 1px solid var(--line); background: var(--paper); }
 .empty { text-align: center; color: var(--muted); padding: 60px 0; }
 
 /* Renglones */
@@ -30,30 +30,30 @@
 .item .opts { font-size: 0.78rem; color: var(--brown); }
 .item .hint { display: block; font-size: 0.72rem; color: var(--green); font-weight: 600; }
 .qty { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
-.qty button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); background: #fff; line-height: 1; }
+.qty button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); line-height: 1; }
 .qty button:hover { background: var(--cream); }
 .item-right { text-align: right; font-weight: 600; }
 .item-right .rm { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; text-decoration: underline; margin-top: 6px; }
 
 /* Cómo recibir y cómo pagar */
 .choices h4 { font-family: var(--serif-soft); font-size: 1.25rem; color: var(--brown-d); margin: 20px 0 8px; }
-.choice { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 12px; margin-bottom: 8px; cursor: pointer; background: #fff; transition: border-color 0.15s; }
+.choice { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 12px; margin-bottom: 8px; cursor: pointer; background: var(--paper); transition: border-color 0.15s; }
 .choice:hover { border-color: var(--brown); }
-.choice.on { border-color: var(--brown); background: #faf7f2; }
+.choice.on { border-color: var(--brown); background: var(--cream); }
 .choice input { accent-color: var(--brown); }
 .choice-main { flex: 1; display: flex; flex-direction: column; line-height: 1.3; }
 .choice-main strong { font-size: 0.9rem; }
 .choice-main small { font-size: 0.76rem; color: var(--muted); }
 .choice-price { font-size: 0.8rem; font-weight: 600; color: var(--brown-d); white-space: nowrap; }
 .choice-price.off { color: var(--green); }
-.address { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; font-size: 0.9rem; resize: vertical; margin: 0 0 8px; background: #fff; }
+.address { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; font-size: 0.9rem; resize: vertical; margin: 0 0 8px; background: var(--paper); }
 .address:focus { outline: 2px solid var(--brown); border-color: transparent; }
 .address.bad { border-color: var(--danger); }
 
 /* Cupón de descuento */
 .cupon h4 { font-family: var(--serif-soft); font-size: 1.25rem; color: var(--brown-d); margin: 20px 0 8px; }
 .cupon-row { display: flex; gap: 8px; }
-.cupon-row input { flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; font-size: 0.9rem; text-transform: uppercase; background: #fff; }
+.cupon-row input { flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; font-size: 0.9rem; text-transform: uppercase; background: var(--paper); }
 .cupon-row input:focus { outline: 2px solid var(--brown); border-color: transparent; }
 .cupon-msg { font-size: 0.82rem; margin: 6px 0 4px; min-height: 1em; color: var(--muted); }
 .cupon-msg.ok { color: var(--green); font-weight: 600; }
@@ -73,10 +73,10 @@
 }
 
 /* Barra de progreso hacia el envío gratis */
-.ship-goal { background: #f3f7ee; border: 1px solid #d3e0c4; border-radius: 12px; padding: 12px 14px; margin: 12px 0 4px; }
+.ship-goal { background: var(--cream); border: 1px solid var(--caramelo); border-radius: 12px; padding: 12px 14px; margin: 12px 0 4px; }
 .ship-goal p { font-size: 0.86rem; color: var(--ink); margin-bottom: 8px; }
-.ship-goal.done { background: #e6f2dc; }
-.ship-bar { height: 8px; border-radius: 999px; background: #d8e4c9; overflow: hidden; }
+.ship-goal.done { background: var(--cream); }
+.ship-bar { height: 8px; border-radius: 999px; background: var(--cream-2); overflow: hidden; }
 .ship-bar span { display: block; height: 100%; background: var(--green); border-radius: 999px; transition: width 0.4s; }
 
 .foot-trust { font-size: 0.76rem; color: var(--muted); text-align: center; margin: 8px 0 0; line-height: 1.4; }
@@ -85,7 +85,7 @@
 /* Barra fija del celular */
 .cart-bar {
   position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 45; display: none; align-items: center; gap: 12px;
-  background: var(--brown-d); color: #fff; padding: 10px 14px; border-radius: 999px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  background: var(--brown-d); color: var(--paper); padding: 10px 14px; border-radius: 999px; box-shadow: 0 10px 28px rgba(23, 50, 77, 0.3);
   font-weight: 600; animation: sube 0.3s ease;
 }
 .cart-bar-qty { min-width: 26px; height: 26px; border-radius: 13px; background: var(--caramelo-claro); color: var(--ink); display: grid; place-items: center; font-size: 0.8rem; font-weight: 700; padding: 0 6px; }

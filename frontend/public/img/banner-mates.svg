@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111111"/><stop offset="1" stop-color="#3a3a3a"/></linearGradient></defs>
-<rect width="1600" height="600" fill="url(#g)"/>
-<circle cx="1330" cy="300" r="430" fill="#ffffff" opacity=".08"/><circle cx="1330" cy="300" r="300" fill="#ffffff" opacity=".08"/>
+<rect width="1600" height="600" fill="#344638"/>
+<circle cx="1330" cy="300" r="430" fill="#78836A" opacity=".2"/><circle cx="1330" cy="300" r="300" fill="#C5AD78" opacity=".16"/>
 <text x="1330" y="370" font-size="260" text-anchor="middle">🧉</text>
-<text x="120" y="190" font-family="Georgia,serif" font-size="30" letter-spacing="8" fill="#efe9df" opacity=".85">NUESTROS MATES</text>
-<text x="120" y="320" font-family="Georgia,serif" font-size="108" font-weight="700" fill="#f7f5f1">Mates para</text>
-<text x="120" y="400" font-family="Georgia,serif" font-size="108" font-weight="700" font-style="italic" fill="#efe9df">toda la vida</text>
-<rect x="120" y="450" width="300" height="66" rx="33" fill="#f7f5f1"/>
-<text x="270" y="493" font-family="Arial,sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#111111">Ver mates</text>
+<text x="120" y="190" font-family="Georgia,serif" font-size="30" letter-spacing="8" fill="#C5AD78" opacity=".95">NUESTROS MATES</text>
+<text x="120" y="320" font-family="Georgia,serif" font-size="108" font-weight="700" fill="#F8F7F0">Mates para</text>
+<text x="120" y="400" font-family="Georgia,serif" font-size="108" font-weight="700" font-style="italic" fill="#E9E4D5">toda la vida</text>
+<rect x="120" y="450" width="300" height="66" rx="33" fill="#C5AD78"/>
+<text x="270" y="493" font-family="Arial,sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#344638">Ver mates</text>
 </svg>

@@ -1,7 +1,7 @@
 /* Barra con mensajes en movimiento (debajo del nombre de la marca) */
 
 .announce {
-  background: var(--brown-d); color: var(--cream);
+  background: var(--brown-d); color: var(--paper);
   overflow: hidden; white-space: nowrap; height: 38px;
   display: flex; align-items: center;
 }

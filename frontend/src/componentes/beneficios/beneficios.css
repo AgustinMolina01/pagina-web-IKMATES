@@ -1,5 +1,5 @@
 /* Franja de 4 beneficios debajo de la portada */
-.strip { background: #fff; border-bottom: 1px solid var(--line); }
+.strip { background: var(--cream); border-bottom: 1px solid var(--line); }
 .strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 26px 0; }
 .strip-item { display: flex; align-items: center; gap: 14px; color: var(--brown); }
 .strip-item svg { flex: none; }

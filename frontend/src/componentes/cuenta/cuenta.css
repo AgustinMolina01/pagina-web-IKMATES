@@ -8,7 +8,7 @@
 .acct-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .acct-menu {
   position: absolute; right: 0; top: calc(100% + 10px); min-width: 220px; z-index: 60;
-  background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 8px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 8px;
   opacity: 0; visibility: hidden; transform: translateY(-6px); transition: 0.2s;
 }
 .acct-menu.open { opacity: 1; visibility: visible; transform: none; }
@@ -18,16 +18,16 @@
 .acct-tip { text-align: center; }
 
 /* Ventana (la base .pmodal / .pm-back / .pm-x vive en product-modal.css) */
-.am-box { position: relative; background: #fff; border-radius: var(--radius); width: min(430px, 100%); max-height: 92vh; overflow: auto; padding: 30px 30px 26px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); }
+.am-box { position: relative; background: var(--paper); border-radius: var(--radius); width: min(430px, 100%); max-height: 92vh; overflow: auto; padding: 30px 30px 26px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); }
 .am-head { text-align: center; margin-bottom: 16px; }
 .am-head img { width: 84px; height: 84px; border-radius: 50%; margin: 0 auto 12px; object-fit: cover; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); }
 .am-head h2 { font-size: 1.9rem; margin-bottom: 4px; }
 .am-head p { color: var(--muted); font-size: 0.92rem; }
 .am-tabs { display: grid; grid-template-columns: 1fr 1fr; background: var(--cream); border-radius: 999px; padding: 4px; margin-bottom: 18px; }
 .am-tabs button { padding: 10px; border-radius: 999px; font-weight: 600; font-size: 0.88rem; color: var(--muted); }
-.am-tabs button.on { background: #fff; color: var(--brown-d); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
+.am-tabs button.on { background: var(--paper); color: var(--brown-d); box-shadow: 0 2px 8px rgba(23, 50, 77, 0.12); }
 .am-box label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); margin: 10px 0 4px; }
-.am-box input { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; color: var(--ink); }
+.am-box input { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--paper); color: var(--ink); }
 .am-box input:focus { outline: 2px solid var(--brown); border-color: transparent; }
 .am-note { font-size: 0.82rem; color: var(--muted); margin: 8px 0 0; }
 .am-note a { color: var(--brown-d); text-decoration: underline; }

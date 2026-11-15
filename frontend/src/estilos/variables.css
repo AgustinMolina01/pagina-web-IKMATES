@@ -1,21 +1,19 @@
-/* Variables de diseño: colores, radios, sombras. Cambiar acá cambia toda la tienda y el panel.
-   Paleta "negro y caramelo": fondo hueso, botones negro carbón, detalles caramelo.
-   (Los nombres --cream, --brown… quedaron de la paleta anterior; lo que vale es el color.) */
+/* Paleta criolla: verdes naturales, crema, blanco cálido y dorado. */
 :root {
-  --cream: #efe9df;    /* fondo de secciones alternadas (hueso) */
-  --cream-2: #e4dccf;  /* hueso un poco más oscuro (hover) */
-  --paper: #f7f5f1;    /* fondo general */
-  --brown: #1f1f1f;    /* botones y elementos principales (negro carbón) */
-  --brown-d: #111111;  /* títulos y hover de botones */
-  --caramelo: #9a6428; /* detalles: etiquetas, títulos chicos, pasos */
-  --caramelo-claro: #ecd3ad;
-  --ink: #151515;      /* texto */
-  --green: #3f5a3a;    /* solo para lo positivo: descuentos, envío gratis */
-  --muted: #6b6560;    /* texto secundario */
-  --line: #e3ded6;     /* bordes */
+  --cream: #E9E4D5;        /* fondos secundarios y tarjetas */
+  --cream-2: #F8F7F0;      /* superficies claras */
+  --paper: #F8F7F0;         /* fondo principal */
+  --brown: #78836A;         /* verde oliva para acciones secundarias */
+  --brown-d: #344638;       /* verde profundo para identidad */
+  --caramelo: #C5AD78;      /* dorado para detalles premium */
+  --caramelo-claro: #E9E4D5;
+  --ink: #344638;           /* texto principal */
+  --green: #344638;         /* acentos positivos */
+  --muted: #344638;
+  --line: #E9E4D5;
   --danger: #b3261e;
   --radius: 16px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow: 0 10px 30px rgba(52, 70, 56, 0.14);
   --serif: "Playfair Display", "Cormorant Garamond", serif;
   --serif-soft: "Cormorant Garamond", serif;
 }

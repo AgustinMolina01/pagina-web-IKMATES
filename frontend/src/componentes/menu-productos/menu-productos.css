@@ -1,6 +1,6 @@
 /* Desplegable grande de "Productos": una columna por categoría, con sus subcategorías debajo */
 .mega {
-  position: absolute; left: 0; right: 0; top: 100%; background: #fff;
+  position: absolute; left: 0; right: 0; top: 100%; background: var(--paper);
   border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); box-shadow: 0 22px 34px rgba(0, 0, 0, 0.12);
   max-height: min(70vh, 560px); overflow: auto;
   opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
@@ -9,7 +9,7 @@
 .mega-cols { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 28px 34px; padding: 30px 0 18px; }
 .mega-top { display: block; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--brown-d); padding: 2px 0 10px; }
 .mega-sub { display: block; font-size: 0.88rem; color: var(--muted); padding: 5px 0; }
-.mega a:hover { color: var(--brown); }
+.mega a:hover { color: var(--brown-d); text-decoration-color: var(--brown); }
 .mega-all {
   display: inline-block; margin: 6px 0 22px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--brown-d); border-bottom: 1px solid var(--brown);

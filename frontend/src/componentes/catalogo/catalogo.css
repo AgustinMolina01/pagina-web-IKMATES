@@ -10,5 +10,5 @@
 .catalog-empty { text-align: center; color: var(--muted); padding: 70px 20px; }
 
 .section-head h2 a:hover { color: var(--brown); }
-.ver-todo { display: inline-block; margin-top: 4px; font-size: 0.9rem; font-weight: 600; color: var(--brown); text-decoration: underline; text-underline-offset: 3px; }
+.ver-todo { display: inline-block; margin-top: 4px; font-size: 0.9rem; font-weight: 600; color: var(--brown-d); text-decoration: underline; text-decoration-color: var(--brown); text-underline-offset: 3px; }
 .ver-todo:hover { color: var(--brown-d); }

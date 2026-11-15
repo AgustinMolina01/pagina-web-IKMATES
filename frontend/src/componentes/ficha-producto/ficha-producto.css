@@ -1,6 +1,6 @@
 /* Página del producto: galería, opciones (color, virola…) y botón de agregar */
 .pagina-prod { padding: 26px 0 70px; }
-.pm-box { display: grid; grid-template-columns: 1.05fr 1fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.pm-box { display: grid; grid-template-columns: 1.05fr 1fr; gap: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .pm-main { aspect-ratio: 1 / 1; background: linear-gradient(145deg, var(--cream), var(--cream-2)); display: grid; place-items: center; font-size: 6rem; }
 .pm-main img { width: 100%; height: 100%; object-fit: cover; }
 .pm-thumbs { display: flex; gap: 8px; padding: 10px; overflow-x: auto; }
@@ -18,11 +18,11 @@
 .pm-save { background: #fde7e5; color: var(--danger); font-size: 0.78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
 .pm-pay { color: var(--green); font-size: 0.92rem; }
 .pm-pay b { font-weight: 700; font-size: 1.05rem; }
-.pm-off { position: absolute; top: 14px; left: 14px; background: var(--danger); color: #fff; font-weight: 700; padding: 6px 12px; border-radius: 999px; font-size: 0.95rem; }
+.pm-off { position: absolute; top: 14px; left: 14px; background: var(--danger); color: var(--paper); font-weight: 700; padding: 6px 12px; border-radius: 999px; font-size: 0.95rem; }
 .pm-main { position: relative; }
 .pm-info .wh { font-size: 0.85rem; }
 .pm-info .low-stock { font-size: 0.85rem; }
-.pm-buy { display: flex; gap: 10px; align-items: stretch; margin-top: 10px; background: #fff; }
+.pm-buy { display: flex; gap: 10px; align-items: stretch; margin-top: 10px; background: var(--paper); }
 .pm-qty { display: flex; align-items: center; border: 1.5px solid var(--line); border-radius: 999px; overflow: hidden; }
 .pm-qty button { width: 40px; height: 100%; min-height: 48px; font-size: 1.2rem; }
 .pm-qty button:hover:not(:disabled) { background: var(--cream); }
@@ -38,8 +38,7 @@
 .pm-more-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .pm-mini { text-align: left; display: flex; flex-direction: column; gap: 4px; }
 .pm-mini-img { aspect-ratio: 1; border-radius: 12px; overflow: hidden; display: grid; place-items: center; font-size: 2.4rem; background: linear-gradient(145deg, var(--cream), var(--cream-2)); }
-.pm-mini-img.green { background: linear-gradient(145deg, #e6e1d6, #d6cfc2); }
-.pm-mini-img.rose { background: linear-gradient(145deg, #f0e2cc, #e0c69f); }
+.pm-mini-img.green, .pm-mini-img.rose { background: linear-gradient(145deg, var(--cream), var(--cream-2)); }
 .pm-mini-img img { width: 100%; height: 100%; object-fit: cover; }
 .pm-mini-name { font-size: 0.85rem; font-weight: 600; line-height: 1.25; }
 .pm-mini-price { font-size: 0.85rem; color: var(--brown-d); font-weight: 700; }
@@ -49,9 +48,9 @@
 .pm-opt { margin-top: 6px; }
 .pm-opt-name { display: block; font-size: 0.78rem; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
 .pm-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.pm-pill { padding: 8px 16px; border: 1.5px solid var(--line); border-radius: 999px; font-size: 0.88rem; font-weight: 500; background: #fff; transition: 0.15s; }
+.pm-pill { padding: 8px 16px; border: 1.5px solid var(--line); border-radius: 999px; font-size: 0.88rem; font-weight: 500; background: var(--paper); transition: 0.15s; }
 .pm-pill:hover:not(:disabled) { border-color: var(--brown); }
-.pm-pill.on { border-color: var(--brown); background: var(--brown); color: #fff; }
+.pm-pill.on { border-color: var(--brown-d); background: var(--brown-d); color: var(--paper); }
 .pm-pill:disabled { opacity: 0.45; text-decoration: line-through; cursor: not-allowed; }
 
 @media (max-width: 720px) {

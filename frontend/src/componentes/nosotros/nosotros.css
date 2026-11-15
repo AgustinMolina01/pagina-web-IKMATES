@@ -5,7 +5,7 @@
 .about .eyebrow { margin-bottom: 14px; }
 
 .values { list-style: none; display: grid; gap: 14px; }
-.values li { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; display: flex; flex-direction: column; }
+.values li { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; display: flex; flex-direction: column; }
 .values strong { font-family: var(--serif-soft); font-size: 1.3rem; color: var(--brown-d); }
 .values span { font-size: 0.9rem; color: var(--muted); }
 
