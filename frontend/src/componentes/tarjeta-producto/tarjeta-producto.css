@@ -4,10 +4,9 @@
 .card { background: var(--cream); color: var(--ink); border: 1px solid var(--caramelo); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 
-.card-img { aspect-ratio: 1 / 1; display: grid; place-items: center; font-size: 4.5rem; position: relative; cursor: pointer; background: linear-gradient(145deg, var(--cream), var(--cream-2)); overflow: hidden; }
+.card-img { aspect-ratio: 3 / 4; display: grid; place-items: center; font-size: 4.5rem; position: relative; cursor: pointer; background: linear-gradient(145deg, var(--cream), var(--cream-2)); overflow: hidden; }
 .card-img.green, .card-img.rose { background: linear-gradient(145deg, var(--cream), var(--cream-2)); }
-.card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
-.card:hover .card-img img { transform: scale(1.05); }
+.card-img img { width: 100%; height: 100%; padding: 6px; object-fit: contain; background: var(--paper); transition: transform 0.4s; }
 
 .tags { position: absolute; top: 12px; left: 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
 .tag { background: var(--cream); color: var(--brown-d); border: 1px solid var(--brown); font-size: 0.7rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; letter-spacing: 0.04em; }
