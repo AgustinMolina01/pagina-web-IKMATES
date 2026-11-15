@@ -70,7 +70,7 @@ test("tras 8 ingresos fallidos se bloquea el login un rato", async () => {
 });
 
 test("los archivos del servidor no se pueden descargar desde el navegador", async () => {
-  for (const url of ["/backend/servidor.js", "/servidor.js", "/package.json", "/datos/ikmates.db", "/backend/datos/ikmates.db", "/backend/codigo/configuracion.js", "/frontend/codigo/principal-tienda.js", "/pruebas/ejecutar.js"]) {
+  for (const url of ["/backend/servidor.js", "/servidor.js", "/package.json", "/datos/ikmates.db", "/backend/datos/ikmates.db", "/backend/src/configuracion.js", "/frontend/src/principal-tienda.js", "/pruebas/ejecutar.js"]) {
     assert.equal((await fetch(srv.base + url)).status, 404, url);
   }
   assert.equal((await fetch(srv.base + "/")).status, 200);

@@ -1,8 +1,8 @@
 # Dependencias
 node_modules/
 
-# Lo que genera el armado del frontend
-frontend/armado/
+# Lo que genera el frontend
+frontend/dist/
 
 # Datos del negocio: NO se suben al repositorio (hacer respaldo aparte desde el panel)
 backend/datos/

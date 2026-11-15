@@ -1,20 +1,20 @@
-// Arma el sitio: junta el HTML, CSS y JS de cada componente y deja todo listo en frontend/armado/.
+// Arma el sitio: junta el HTML, CSS y JS de cada componente y deja todo listo en frontend/dist/.
 //
 //   npm run armar            → versión final (minificada)
 //   npm run desarrollo       → versión de desarrollo, se rearma sola al guardar un archivo
 //
 // Cómo funciona:
-//   • Cada componente vive en su carpeta (codigo/componentes/<nombre>/) con su .html, .css y .js.
-//   • Las páginas (codigo/paginas/*.pagina.html) arman la estructura con  <!-- @include componentes/x/x.html -->
-//   • El .js de cada componente importa su .css, y esbuild junta todo en armado/assets/<página>.js y .css
-//   • Lo que está en publico/ (imágenes, etc.) se copia tal cual a armado/
+//   • Cada componente vive en su carpeta (src/componentes/<nombre>/) con su .html, .css y .js.
+//   • Las páginas (src/paginas/*.pagina.html) arman la estructura con  <!-- @include componentes/x/x.html -->
+//   • El .js de cada componente importa su .css, y esbuild junta todo en dist/assets/<página>.js y .css
+//   • Lo que está en public/ (imágenes, etc.) se copia tal cual a dist/
 const fs = require("fs");
 const path = require("path");
 const esbuild = require("esbuild");
 
-const CODIGO = path.join(__dirname, "codigo");
-const ARMADO = path.join(__dirname, "armado");
-const PUBLICO = path.join(__dirname, "publico");
+const CODIGO = path.join(__dirname, "src");
+const ARMADO = path.join(__dirname, "dist");
+const PUBLICO = path.join(__dirname, "public");
 const DEV = process.argv.includes("--dev");
 const WATCH = process.argv.includes("--watch");
 
@@ -23,7 +23,7 @@ const PAGES = [
   { name: "panel", html: "paginas/panel.pagina.html", out: "panel.html", entry: "panel/principal-panel.js" },
 ];
 
-/** Reemplaza <!-- @include ruta --> por el contenido del archivo (la ruta es relativa a codigo/). */
+/** Reemplaza <!-- @include ruta --> por el contenido del archivo (la ruta es relativa a src/). */
 function renderHtml(relPath, chain = []) {
   const file = path.join(CODIGO, relPath);
   if (chain.includes(file)) throw new Error(`Include circular: ${[...chain, file].join(" → ")}`);
@@ -49,7 +49,7 @@ const bundleOptions = (page) => ({
   minify: !DEV,
   sourcemap: DEV,
   legalComments: "none",
-  external: ["/img/*"], // las imágenes de publico/ se referencian como /img/... y se copian tal cual
+  external: ["/img/*"], // las imágenes de public/ se referencian como /img/... y se copian tal cual
   logLevel: "warning",
 });
 

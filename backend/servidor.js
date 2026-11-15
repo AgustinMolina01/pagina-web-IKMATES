@@ -1,9 +1,9 @@
 // Punto de entrada: prepara la base de datos y enciende el servidor.
-const { PORT } = require("./codigo/configuracion");
-const db = require("./codigo/base-de-datos/conexion");
-const { migrate } = require("./codigo/base-de-datos/esquema");
-const { usingInitialPassword } = require("./codigo/intermedios/autenticacion");
-const { createApp } = require("./codigo/aplicacion");
+const { PORT } = require("./src/configuracion");
+const db = require("./src/base-de-datos/conexion");
+const { migrate } = require("./src/base-de-datos/esquema");
+const { usingInitialPassword } = require("./src/intermedios/autenticacion");
+const { createApp } = require("./src/aplicacion");
 
 async function main() {
   await db.open();

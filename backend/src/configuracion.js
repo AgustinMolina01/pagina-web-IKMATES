@@ -16,7 +16,7 @@ module.exports = {
   DATA_DIR,
   DB_FILE: path.join(DATA_DIR, "ikmates.db"),
   UPLOAD_DIR: process.env.UPLOAD_DIR || path.join(RAIZ, "fotos-subidas"),
-  PUBLIC_DIR: process.env.PUBLIC_DIR || path.join(RAIZ, "..", "frontend", "armado"),
+  PUBLIC_DIR: process.env.PUBLIC_DIR || path.join(RAIZ, "..", "frontend", "dist"),
   // Dirección pública de la tienda (ej: https://ikmates.com.ar). Si no se define, se toma de cada visita.
   SITE_URL: process.env.SITE_URL || "",
   MAX_UPLOAD_BYTES: 5 * 1024 * 1024,
