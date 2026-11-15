@@ -1,0 +1,17 @@
+/* Botones compartidos. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 28px; border-radius: 999px; font-weight: 600; font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.btn.full { width: 100%; }
+.btn-sm { padding: 10px 20px; font-size: 0.88rem; }
+
+.btn-primary { background: var(--brown); color: #fff; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22); }
+.btn-primary:hover { background: var(--brown-d); }
+.btn-ghost { border: 1.5px solid var(--brown); color: var(--brown-d); }
+.btn-ghost:hover { background: var(--cream); }
+
+.link-btn { display: block; margin: 12px auto 0; color: var(--muted); font-size: 0.85rem; text-decoration: underline; }

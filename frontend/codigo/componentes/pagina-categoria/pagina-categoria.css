@@ -1,0 +1,22 @@
+/* Página de una categoría */
+.pagina-cat { padding: 26px 0 80px; min-height: 60vh; }
+.cat-cabecera { margin-bottom: 18px; }
+.cat-cabecera h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
+.cat-cabecera p { color: var(--muted); }
+
+.cat-barra { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 20px; margin: 18px 0 28px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.cat-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 8px 16px; border: 1.5px solid var(--line); border-radius: 999px; font-size: 0.88rem; font-weight: 500; background: #fff; transition: 0.15s; }
+.chip:hover { border-color: var(--brown); }
+.chip.on { background: var(--brown); border-color: var(--brown); color: #fff; }
+.cat-orden { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); margin-left: auto; }
+.cat-orden select { padding: 9px 12px; border: 1.5px solid var(--line); border-radius: 10px; background: #fff; font: inherit; font-size: 0.88rem; color: var(--ink); }
+
+.pagina-cat .sub-head { margin-top: 44px; }
+.pagina-cat .sub-head a:hover { color: var(--brown); }
+
+@media (max-width: 600px) {
+  .pagina-cat { padding-top: 14px; }
+  .cat-orden { margin-left: 0; width: 100%; }
+  .cat-orden select { flex: 1; }
+}

@@ -1,0 +1,24 @@
+/* Estructura de secciones y marca, compartidas por varios componentes. */
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--serif-soft); font-weight: 700; font-size: 1.5rem; color: var(--brown-d);
+}
+.brand img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+
+.section { padding: 90px 0; scroll-margin-top: 140px; }
+.section.alt { background: var(--cream); }
+.section-head { text-align: center; margin-bottom: 46px; }
+.section-head h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 8px; }
+.section-head p:last-child { color: var(--muted); }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem; font-weight: 600; color: var(--caramelo); margin-bottom: 14px; }
+
+@media (max-width: 860px) {
+  .section { padding: 64px 0; }
+}
+
+/* Migas de pan: Inicio › Mates › Mate Imperial */
+.migas { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 0.85rem; color: var(--muted); margin-bottom: 18px; }
+.migas a { text-decoration: underline; text-underline-offset: 3px; }
+.migas a:hover { color: var(--brown-d); }
+.migas span[aria-hidden] { opacity: 0.6; }
+.migas [aria-current] { color: var(--ink); font-weight: 600; }

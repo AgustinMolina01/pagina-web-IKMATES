@@ -1,0 +1,7 @@
+// Las 24 jurisdicciones de Argentina, para el envío con costo por provincia.
+// (La misma lista está en backend/codigo/utilidades/provincias.js)
+export const PROVINCIAS = [
+  "Buenos Aires", "Ciudad de Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos",
+  "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan",
+  "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucumán",
+];

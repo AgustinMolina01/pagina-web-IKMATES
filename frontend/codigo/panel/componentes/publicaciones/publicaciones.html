@@ -1,0 +1,38 @@
+<section class="tab" id="tab-publicaciones">
+  <div class="guia"><b>La publicidad es lo primero que ve el cliente.</b><ol><li><b>Imágenes:</b> subí una foto horizontal de <b>1600 × 610 px</b> con lo importante en el centro (en el celular se recortan los costados).</li><li>Si querés, elegí desde y hasta qué día se ve.</li><li><b>Barra en movimiento:</b> escribí frases cortas, ej: "ENVÍOS A TODO EL PAÍS".</li></ol></div>
+  <div class="panel">
+    <h3>Imágenes de publicidad</h3>
+    <p class="sub">Se ven arriba de la tienda, una después de otra.</p>
+    <form id="bForm">
+      <input type="hidden" id="bId">
+      <div style="display:flex;gap:14px;align-items:center;margin-bottom:12px">
+        <div id="bThumb" style="width:150px;height:60px;border-radius:10px;background:var(--cream);display:grid;place-items:center;overflow:hidden">🖼️</div>
+        <div style="flex:1"><label>Imagen *</label><input type="file" id="bFile" accept="image/*" style="margin:0"></div>
+      </div>
+      <div class="row2">
+        <div><label>Título (opcional)</label><input id="bTitle" maxlength="120"></div>
+        <div><label>Adónde lleva al tocarla (opcional)</label><input id="bLink" maxlength="300" placeholder="/categoria/combos o https://..."></div>
+      </div>
+      <div class="row2">
+        <div><label>Empieza el (opcional)</label><input type="date" id="bStart"></div>
+        <div><label>Termina el (opcional)</label><input type="date" id="bEnd"></div>
+      </div>
+      <div class="chk"><input type="checkbox" id="bActive" checked><label for="bActive">Visible en la tienda</label></div>
+      <div class="err" id="bErr"></div>
+      <button class="btn btn-primary btn-sm" type="submit">Guardar publicación</button>
+      <button class="btn btn-ghost btn-sm hidden" type="button" id="bCancel">Cancelar edición</button>
+    </form>
+    <div id="bList" style="margin-top:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px"></div>
+  </div>
+
+  <div class="panel">
+    <h3>Barra en movimiento</h3>
+    <p class="sub">Pasa debajo del nombre de la tienda. Las promos de descuento y envío gratis se suman solas.</p>
+    <form id="aForm" style="display:flex;gap:10px;flex-wrap:wrap">
+      <input id="aText" maxlength="140" placeholder="Nuevo mensaje" style="flex:1;min-width:220px;margin:0" required>
+      <button class="btn btn-primary btn-sm" type="submit">Agregar</button>
+    </form>
+    <div class="err" id="aErr"></div>
+    <div id="aList"></div>
+  </div>
+</section>

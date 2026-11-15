@@ -1,0 +1,21 @@
+{
+  "name": "ikmates",
+  "private": true,
+  "description": "IK Mates: tienda de mates. frontend/ (componentes de la página) + backend/ (servidor y base de datos) + pruebas/",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "instalar-todo": "npm install && npm --prefix backend install",
+    "armar": "node frontend/armar.js",
+    "desarrollo": "node frontend/armar.js --dev --watch",
+    "start": "npm run armar && npm --prefix backend start",
+    "test": "npm run armar && node pruebas/ejecutar.js",
+    "prueba:api": "node pruebas/ejecutar.js api",
+    "prueba:pantallas": "npm run armar && node pruebas/ejecutar.js pantallas"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "jsdom": "^24.1.3"
+  }
+}

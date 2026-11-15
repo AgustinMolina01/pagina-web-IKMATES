@@ -1,0 +1,31 @@
+/* Estadísticas: barras simples de una sola serie (color caramelo), valores siempre escritos en texto */
+.est-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+@media (max-width: 760px) { .est-dos { grid-template-columns: 1fr; } }
+
+/* Ventas por mes: columnas verticales */
+.est-meses { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; align-items: end; height: 220px; padding-top: 24px; border-bottom: 1px solid var(--line); }
+.est-mes { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; outline: none; }
+.est-mes .valor { font-size: 0.72rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; white-space: nowrap; }
+.est-mes .barra { width: min(46px, 70%); background: var(--caramelo); border-radius: 4px 4px 0 0; min-height: 2px; transition: opacity 0.15s; }
+.est-mes.vacio .barra { background: var(--line); }
+.est-nombres { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 6px; }
+.est-nombres span { text-align: center; font-size: 0.78rem; color: var(--muted); text-transform: capitalize; }
+
+/* Rankings: barras horizontales con el número al lado */
+.est-fila { position: relative; display: grid; grid-template-columns: minmax(110px, 38%) 1fr auto; gap: 10px; align-items: center; padding: 6px 0; outline: none; }
+.est-fila .nombre { font-size: 0.86rem; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.est-fila .pista { height: 12px; }
+.est-fila .barra { height: 100%; background: var(--caramelo); border-radius: 0 4px 4px 0; min-width: 2px; transition: opacity 0.15s; }
+.est-fila .valor { font-size: 0.82rem; font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+/* Al pasar el mouse o con el teclado: se resalta la barra y aparece el detalle */
+.est-meses:hover .barra, .est-ranking:hover .barra { opacity: 0.45; }
+.est-mes:hover .barra, .est-mes:focus .barra, .est-fila:hover .barra, .est-fila:focus .barra { opacity: 1; }
+.est-tip {
+  position: absolute; z-index: 5; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: #fff; font-size: 0.78rem; line-height: 1.4; padding: 7px 10px; border-radius: 8px;
+  white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity 0.12s;
+}
+.est-fila .est-tip { left: auto; right: 0; transform: none; }
+.est-mes:hover .est-tip, .est-mes:focus .est-tip, .est-fila:hover .est-tip, .est-fila:focus .est-tip { opacity: 1; }
+.est-vacio { color: var(--muted); font-size: 0.88rem; }

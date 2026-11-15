@@ -1,0 +1,15 @@
+/* Cómo comprar: 3 pasos y cuadros con formas de pago, envíos y compras por mayor */
+.steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 36px; }
+.steps li { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.steps .n { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--caramelo); color: #fff; display: grid; place-items: center; font-weight: 700; }
+.steps strong { display: block; font-size: 1rem; }
+.steps span:not(.n) { font-size: 0.88rem; color: var(--muted); }
+
+.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+.info-card { background: var(--cream); border-radius: var(--radius); padding: 24px 26px; }
+.info-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.info-card ul { list-style: none; display: grid; gap: 6px; font-size: 0.93rem; }
+.info-card li::before { content: "✓"; color: var(--green); font-weight: 700; margin-right: 8px; }
+.info-card p { font-size: 0.93rem; color: var(--ink); }
+
+@media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }

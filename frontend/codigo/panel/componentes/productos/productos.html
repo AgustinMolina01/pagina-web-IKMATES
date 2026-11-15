@@ -1,0 +1,44 @@
+<section class="tab" id="tab-productos">
+  <div class="guia"><b>Acá cargás lo que vendés.</b><ol><li>Tocá <b>＋ Nuevo producto</b>.</li><li>Poné las fotos, el nombre, la categoría y el precio.</li><li>Tocá <b>Guardar</b>: ya se ve en la tienda.</li></ol>Para subir o bajar muchos precios juntos usá <b>Cambiar precios</b>.</div>
+  <div class="toolbar">
+    <button class="btn btn-primary btn-sm" id="newProduct">＋ Nuevo producto</button>
+    <button class="btn btn-ghost btn-sm" id="openImport">Cargar desde planilla</button>
+    <button class="btn btn-ghost btn-sm" id="openPrices">Cambiar precios</button>
+  </div>
+
+  <!-- @include panel/componentes/formulario-producto/formulario-producto.html -->
+  <!-- @include panel/componentes/cambio-precios/cambio-precios.html -->
+  <!-- @include panel/componentes/importar-planilla/importar-planilla.html -->
+
+  <div class="panel">
+    <div class="toolbar">
+      <input class="grow" id="pSearch" type="search" placeholder="Buscar por nombre…">
+      <select id="pFilter" style="width:auto;min-width:200px"></select>
+      <select id="pStatus" style="width:auto">
+        <option value="">Todos los estados</option>
+        <option value="sold">Sin stock</option>
+        <option value="low">Poco stock (5 o menos)</option>
+        <option value="hidden">Ocultos</option>
+        <option value="feat">Destacados</option>
+        <option value="whole">Con precio por mayor</option>
+        <option value="opts">Con variantes</option>
+      </select>
+    </div>
+    <div class="bulkbar hidden" id="bulkBar">
+      <b id="bulkCount">0 seleccionados</b>
+      <select id="bulkCat"></select><button class="mini" data-bulk="move">Mover</button>
+      <button class="mini" data-bulk="hide">Ocultar</button><button class="mini" data-bulk="show">Mostrar</button>
+      <button class="mini" data-bulk="soldout">Sin stock</button><button class="mini" data-bulk="instock">Con stock</button>
+      <button class="mini" data-bulk="feature">Destacar</button><button class="mini" data-bulk="unfeature">Quitar destacado</button>
+      <button class="mini" id="bulkPrice">Cambiar precio</button>
+      <button class="mini acts del" data-bulk="delete" style="color:#b3261e">Eliminar</button>
+    </div>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th style="width:30px"><input type="checkbox" id="selAll" aria-label="Seleccionar todos"></th><th>Foto</th><th>Producto</th><th class="hide-m">Categoría</th><th>Precio</th><th>Estado</th><th></th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:14px"><span id="pCount" class="hint"></span> <button class="btn btn-ghost btn-sm hidden" id="moreBtn">Ver más</button></div>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+/* Pestaña Inicio del panel: resumen y mapa de cada parte */
+.mapa { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.mapa button { text-align: left; padding: 14px 16px; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; display: flex; flex-direction: column; gap: 4px; transition: border-color 0.15s, background 0.15s; }
+.mapa button:hover { border-color: var(--brown); background: var(--paper); }
+.mapa b { font-size: 0.95rem; }
+.mapa span { font-size: 0.82rem; color: var(--muted); line-height: 1.35; }
+
+#inResumen .stat { text-align: left; border: 0; cursor: pointer; font: inherit; }
+#inResumen .stat:hover { background: var(--cream-2); }
+

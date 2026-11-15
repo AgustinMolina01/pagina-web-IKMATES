@@ -1,0 +1,25 @@
+<section class="tab" id="tab-cupones">
+  <div class="guia"><b>Códigos de descuento</b> que tus clientes escriben en el carrito (ej: <b>IKMATES10</b>).<ol><li>Elegí el código y si descuenta un <b>%</b> o un <b>monto fijo</b>.</li><li>Opcional: compra mínima, vencimiento y cantidad de usos.</li><li>Compartilo en Instagram o por WhatsApp. Acá ves cuántas veces se usó.</li></ol></div>
+  <div class="panel">
+    <h3>Cupones de descuento</h3>
+    <p class="sub">El cupón se aplica sobre los productos (después del descuento por forma de pago), no sobre el envío.</p>
+    <form id="cpForm">
+      <input type="hidden" id="cpId">
+      <div class="row3">
+        <div><label>Código *</label><input id="cpCode" maxlength="30" placeholder="Ej: IKMATES10" required style="text-transform:uppercase"></div>
+        <div><label>Tipo de descuento</label><select id="cpKind"><option value="percent">Porcentaje (%)</option><option value="amount">Monto fijo ($)</option></select></div>
+        <div><label id="cpValueLabel">Descuento (%) *</label><input id="cpValue" type="number" min="1" step="1" placeholder="10" required></div>
+      </div>
+      <div class="row3">
+        <div><label>Compra mínima ($, opcional)</label><input id="cpMin" type="number" min="0" step="1" placeholder="Ej: 30000"></div>
+        <div><label>Vence el (opcional)</label><input id="cpExpires" type="date"></div>
+        <div><label>Cantidad de usos (vacío = sin límite)</label><input id="cpMax" type="number" min="1" step="1" placeholder="Ej: 50"></div>
+      </div>
+      <div class="chk"><input type="checkbox" id="cpActive" checked><label for="cpActive">Activo (se puede usar en la tienda)</label></div>
+      <div class="err" id="cpErr"></div>
+      <button class="btn btn-primary btn-sm" type="submit">Guardar cupón</button>
+      <button class="btn btn-ghost btn-sm hidden" type="button" id="cpCancel">Cancelar edición</button>
+    </form>
+    <div id="cpList"></div>
+  </div>
+</section>

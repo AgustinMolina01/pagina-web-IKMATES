@@ -1,0 +1,14 @@
+/* Secciones de productos: una por categoría, con subcategorías y "Destacados" arriba */
+#productos .section-head { margin-bottom: 34px; }
+#destacados .section-head h2::after { content: " ★"; color: var(--brown); }
+
+.sub-head {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 500;
+  margin: 40px 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line); scroll-margin-top: 140px;
+}
+.sub-head:first-child { margin-top: 0; }
+.catalog-empty { text-align: center; color: var(--muted); padding: 70px 20px; }
+
+.section-head h2 a:hover { color: var(--brown); }
+.ver-todo { display: inline-block; margin-top: 4px; font-size: 0.9rem; font-weight: 600; color: var(--brown); text-decoration: underline; text-underline-offset: 3px; }
+.ver-todo:hover { color: var(--brown-d); }

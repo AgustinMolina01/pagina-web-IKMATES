@@ -1,0 +1,50 @@
+<div class="panel hidden" id="productPanel">
+  <h3 id="formTitle">Nuevo producto</h3>
+  <form id="pForm">
+    <input type="hidden" id="pId">
+
+    <label>Fotos (la primera es la principal · máx. 5 MB cada una)</label>
+    <div class="photos" id="pPhotos"></div>
+    <input type="file" id="file" accept="image/*" multiple class="hidden">
+
+    <div class="row2">
+      <div><label>Nombre *</label><input id="pName" required maxlength="120"></div>
+      <div><label>Categoría *</label><select id="pCat" required></select></div>
+    </div>
+    <label>Descripción</label>
+    <textarea id="pDesc" rows="3" maxlength="600"></textarea>
+
+    <div class="row2">
+      <div><label>Precio ($) *</label><input id="pPrice" type="number" min="0" step="1" required></div>
+      <div><label>Precio anterior ($) — oferta</label><input id="pOldPrice" type="number" min="1" step="1" placeholder="opcional"></div>
+    </div>
+    <div class="hint"><b>Oferta:</b> poné el precio anterior (más alto) y se muestra tachado con el % de descuento. Vacío = sin oferta.</div>
+    <div class="row2">
+      <div><label>Precio por mayor ($)</label><input id="pWPrice" type="number" min="1" step="1" placeholder="opcional"></div>
+      <div><label>Desde (unidades)</label><input id="pWMin" type="number" min="2" step="1" placeholder="ej: 6"></div>
+    </div>
+    <div class="hint">El precio por mayor se aplica cuando el cliente lleva esa cantidad o más.</div>
+
+    <div class="row2">
+      <div>
+        <label>Stock (cantidad disponible)</label>
+        <input id="pStock" type="number" min="0" step="1" placeholder="vacío = sin control de cantidad">
+        <div class="hint">Baja con cada pedido y al llegar a 0 queda agotado.</div>
+      </div>
+      <div><label>Etiqueta (opcional, ej: "Más vendido")</label><input id="pTag" maxlength="30"></div>
+    </div>
+
+    <label>Variantes (opcional): color, virola, tamaño…</label>
+    <div class="hint">El cliente elige una opción de cada grupo. Tocá una opción para marcarla agotada.</div>
+    <div id="opcionesEditor"></div>
+    <button type="button" class="mini" id="agregarGrupo" style="margin-bottom:14px">＋ Agregar grupo de opciones</button>
+
+    <div class="chk"><input type="checkbox" id="pActive" checked><label for="pActive">Visible en la tienda</label></div>
+    <div class="chk"><input type="checkbox" id="pSold"><label for="pSold">Sin stock (se ve agotado)</label></div>
+    <div class="chk"><input type="checkbox" id="pFeat"><label for="pFeat">Destacado ★ (aparece arriba, en "Destacados")</label></div>
+
+    <div class="err" id="formErr"></div>
+    <button class="btn btn-primary btn-sm" type="submit">Guardar producto</button>
+    <button class="btn btn-ghost btn-sm" type="button" id="cancelEdit">Cancelar</button>
+  </form>
+</div>

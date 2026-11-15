@@ -1,0 +1,22 @@
+<!-- Página de una categoría (/categoria/mates): sus productos, subcategorías y orden. Se arma sola desde pagina-categoria.js -->
+<section class="pagina-cat" id="vistaCategoria" hidden>
+  <div class="container">
+    <nav class="migas" id="catMigas" aria-label="Ubicación"></nav>
+    <header class="cat-cabecera">
+      <h1 id="catTitulo"></h1>
+      <p id="catCuenta"></p>
+    </header>
+    <div class="cat-barra">
+      <div class="cat-chips" id="catChips"></div>
+      <label class="cat-orden">Ordenar por
+        <select id="catOrden">
+          <option value="">Destacados primero</option>
+          <option value="menor">Menor precio</option>
+          <option value="mayor">Mayor precio</option>
+          <option value="nombre">Nombre (A–Z)</option>
+        </select>
+      </label>
+    </div>
+    <div id="catProductos"></div>
+  </div>
+</section>

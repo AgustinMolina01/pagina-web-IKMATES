@@ -1,0 +1,79 @@
+<section class="tab" id="tab-ajustes">
+  <div class="guia"><b>Tus datos y tu seguridad.</b> Lo que escribas acá se ve en toda la tienda.<ol><li>Revisá WhatsApp, horario y dirección.</li><li>Poné tus redes sociales, tu historia ("Quiénes somos") y las preguntas frecuentes.</li><li>Cambiá la contraseña y descargá un respaldo de vez en cuando.</li></ol></div>
+  <form class="panel" id="sForm">
+    <h3>Datos del negocio</h3>
+    <p class="sub">Se muestran en toda la tienda: beneficios, contacto, mapa y pie de página.</p>
+    <div class="row3">
+      <div><label>WhatsApp (con código de país)</label><input id="sWhatsapp" placeholder="5493412147956"></div>
+      <div><label>Horario de atención</label><input id="sHours" maxlength="80" placeholder="9 a 18 hs"></div>
+      <div><label>Dirección</label><input id="sAddress" maxlength="160" placeholder="San Martín 1974, Rosario"></div>
+    </div>
+
+    <h3 style="margin-top:6px">Redes sociales</h3>
+    <p class="sub">Escribí el usuario (ej: <b>@ikmates</b>) o el enlace. Vacío = no se muestra.</p>
+    <div class="row3">
+      <div><label>Instagram</label><input id="sInstagram" maxlength="200"></div>
+      <div><label>Facebook</label><input id="sFacebook" maxlength="200"></div>
+      <div><label>TikTok</label><input id="sTiktok" maxlength="200"></div>
+    </div>
+
+    <h3 style="margin-top:6px">Sección "Cómo comprar"</h3>
+    <p class="sub">Las formas de pago y de entrega que cargaste en <b>Envíos y pagos</b> ya aparecen solas. Acá podés sumar líneas extra (una por línea). Lo que dejes vacío no se muestra.</p>
+    <div class="row2">
+      <div><label>Más sobre formas de pago</label><textarea id="sPayments" rows="3" maxlength="1200" placeholder="Aceptamos todas las tarjetas&#10;Cuotas: consultar"></textarea></div>
+      <div><label>Más sobre envíos</label><textarea id="sShipping" rows="3" maxlength="1200" placeholder="Despachamos de lunes a viernes&#10;Demora de 3 a 7 días hábiles"></textarea></div>
+    </div>
+    <label>Compras por mayor (texto libre)</label>
+    <textarea id="sWholesale" rows="2" maxlength="300" placeholder="Ej: Ventas por mayor desde 6 unidades. Consultá por WhatsApp."></textarea>
+
+    <h3 style="margin-top:14px">Sección "Quiénes somos"</h3>
+    <p class="sub">Contá tu historia. Los párrafos se separan con una línea en blanco.</p>
+    <label>Título</label>
+    <input id="sAboutTitle" maxlength="80" placeholder="Pasión por el mate">
+    <label>Texto</label>
+    <textarea id="sAboutText" rows="5" maxlength="2000"></textarea>
+    <label>Lo que te distingue (uno por línea, con el formato <b>Título: texto</b>)</label>
+    <textarea id="sAboutValues" rows="3" maxlength="600" placeholder="Calidad: Productos elegidos uno por uno."></textarea>
+
+    <h3 style="margin-top:14px">Preguntas frecuentes</h3>
+    <p class="sub">Se muestran en la tienda, debajo de "Quiénes somos". Cada pregunta empieza con <b>##</b> y abajo va la respuesta. Si lo dejás vacío, la sección no aparece.</p>
+    <textarea id="sFaq" rows="10" maxlength="6000" placeholder="## ¿Hacen envíos?&#10;Sí, a todo el país."></textarea>
+    <h3 style="margin-top:14px">Textos legales</h3>
+    <p class="sub">Se ven en <b>/privacidad</b> y <b>/terminos</b>. Son un texto base: revisalos y adaptalos al negocio. Un subtítulo se escribe con <b>##</b> al principio de la línea; los párrafos se separan con una línea en blanco. Si los vaciás, vuelve el texto base.</p>
+    <label>Política de privacidad</label>
+    <textarea id="sPrivacy" rows="8" maxlength="8000"></textarea>
+    <label>Términos y condiciones</label>
+    <textarea id="sTerms" rows="8" maxlength="8000"></textarea>
+    <div class="err" id="sErr"></div>
+    <button class="btn btn-primary btn-sm" type="submit">Guardar ajustes</button> <span class="okmsg" id="sOk"></span>
+  </form>
+
+  <form class="panel" id="mailForm">
+    <h3>Correo de ingreso</h3>
+    <p class="sub">Es el correo con el que entrás a este panel (junto con la contraseña). No se envían mails a esa dirección.</p>
+    <div class="row2">
+      <div><label>Correo</label><input type="email" id="mailNew" autocomplete="username" maxlength="120" required></div>
+      <div><label>Tu contraseña actual (para confirmar)</label><input type="password" id="mailPw" autocomplete="current-password" required></div>
+    </div>
+    <div class="err" id="mailErr"></div>
+    <button class="btn btn-primary btn-sm" type="submit">Guardar correo</button> <span class="okmsg" id="mailOk"></span>
+  </form>
+
+  <form class="panel" id="pwForm">
+    <h3>Cambiar contraseña</h3>
+    <p class="sub">Usá al menos 8 caracteres. Al cambiarla se cierran las demás sesiones abiertas.</p>
+    <div class="row3">
+      <div><label>Contraseña actual</label><input type="password" id="pwCur" autocomplete="current-password" required></div>
+      <div><label>Contraseña nueva</label><input type="password" id="pwNew" autocomplete="new-password" minlength="8" required></div>
+      <div><label>Repetir la nueva</label><input type="password" id="pwNew2" autocomplete="new-password" minlength="8" required></div>
+    </div>
+    <div class="err" id="pwErr"></div>
+    <button class="btn btn-primary btn-sm" type="submit">Cambiar contraseña</button> <span class="okmsg" id="pwOk"></span>
+  </form>
+
+  <div class="panel">
+    <h3>Respaldo</h3>
+    <p class="sub">Descargá una copia de seguridad (un archivo .zip con todos tus productos, categorías, pedidos y fotos). Conviene hacerlo cada tanto y guardarlo en un lugar seguro.</p>
+    <a class="btn btn-primary btn-sm" href="/api/admin/backup" download>Descargar respaldo</a>
+  </div>
+</section>

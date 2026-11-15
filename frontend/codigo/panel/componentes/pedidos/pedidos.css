@@ -1,0 +1,9 @@
+/* Lista de pedidos */
+.card-list { display: grid; gap: 12px; }
+.ord { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: #fff; }
+.ord.nuevo { border-left: 5px solid var(--danger); }
+.ord.atendido { border-left: 5px solid var(--green); }
+.ord.cancelado { opacity: 0.6; }
+.ord-h { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.ord ul { list-style: none; font-size: 0.88rem; color: var(--muted); margin: 6px 0; }
+.ord .ord-datos { font-size: 0.84rem; color: var(--ink); margin: 6px 0; display: grid; gap: 2px; }

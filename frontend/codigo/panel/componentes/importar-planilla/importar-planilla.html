@@ -1,0 +1,13 @@
+<div class="panel hidden" id="importPanel">
+  <h3>Cargar productos desde una planilla</h3>
+  <p class="sub">Armá la lista en Excel, guardala como <b>CSV</b> y subila acá. Las categorías nuevas se crean solas y las fotos las agregás después.</p>
+  <details class="sub"><summary>Ver qué columnas lleva</summary><p>Columnas: <b>categoria, nombre, precio</b> (obligatorias) y <b>descripcion, etiqueta, stock, opciones, sin_stock, destacado, precio_mayorista, minimo_mayorista</b>. En <b>opciones</b> escribí por ejemplo <b>Color: Negro|Rojo; Virola: Acero|Alpaca</b>. Para una subcategoría: <b>Mates &gt; Clásicos</b>.</p></details>
+  <div class="toolbar">
+    <button class="btn btn-ghost btn-sm" id="dlTemplate">Descargar plantilla de ejemplo</button>
+    <input type="file" id="csvFile" accept=".csv,text/csv,text/plain" class="grow">
+  </div>
+  <div class="err" id="impErr"></div>
+  <div id="impPreview"></div>
+  <button class="btn btn-primary btn-sm hidden" id="impGo">Importar</button>
+  <button class="btn btn-ghost btn-sm" id="impClose">Cerrar</button>
+</div>

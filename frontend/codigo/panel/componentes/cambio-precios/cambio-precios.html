@@ -1,0 +1,29 @@
+<div class="panel hidden" id="pricePanel">
+  <h3>Cambiar precios</h3>
+  <p class="sub">Primero ves una vista previa. No se cambia nada hasta que confirmás.</p>
+  <div class="row2">
+    <div>
+      <label>¿A qué productos?</label>
+      <select id="prScope">
+        <option value="selected">Los que tengo seleccionados en la lista</option>
+        <option value="category">Todos los de una categoría</option>
+        <option value="all">Todos los productos</option>
+      </select>
+    </div>
+    <div id="prCatBox" class="hidden"><label>Categoría</label><select id="prCat"></select></div>
+  </div>
+  <div class="row3">
+    <div><label>Tipo de cambio</label><select id="prMode"><option value="percent">Porcentaje (%)</option><option value="fixed">Monto fijo ($)</option></select></div>
+    <div><label id="prValLabel">Porcentaje (ej: 10 sube 10%, -5 baja 5%)</label><input id="prValue" type="number" step="any"></div>
+    <div>
+      <label>Redondear a</label>
+      <select id="prRound"><option value="1">Sin redondeo</option><option value="10">$10</option><option value="100" selected>$100</option><option value="1000">$1.000</option></select>
+    </div>
+  </div>
+  <div class="chk" id="prWholeBox"><input type="checkbox" id="prWhole" checked><label for="prWhole">Aplicar también a los precios por mayor</label></div>
+  <div class="err" id="prErr"></div>
+  <div id="prPreview"></div>
+  <button class="btn btn-ghost btn-sm" id="prPreviewBtn">Ver vista previa</button>
+  <button class="btn btn-primary btn-sm hidden" id="prApplyBtn">Aplicar cambios</button>
+  <button class="btn btn-ghost btn-sm" id="prClose">Cerrar</button>
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "pag-ikmates",
+  "version": "1.0.0",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.3.0",
+    "multer": "^2.5.0",
+    "sql.js": "^1.16.0"
+  }
+}
