@@ -1,0 +1,66 @@
+/* Página del producto: galería, opciones (color, virola…) y botón de agregar */
+.pagina-prod { padding: 26px 0 70px; }
+.pm-box { display: grid; grid-template-columns: 1.05fr 1fr; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.pm-main { aspect-ratio: 1 / 1; background: linear-gradient(145deg, var(--cream), var(--cream-2)); display: grid; place-items: center; font-size: 6rem; }
+.pm-main img { width: 100%; height: 100%; object-fit: cover; }
+.pm-thumbs { display: flex; gap: 8px; padding: 10px; overflow-x: auto; }
+.pm-thumbs button { flex: none; width: 62px; height: 62px; border-radius: 10px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; }
+.pm-thumbs button.on { border-color: var(--brown); opacity: 1; }
+.pm-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+
+.pm-info { padding: 34px 30px; display: flex; flex-direction: column; gap: 10px; }
+.pm-info h2 { font-size: 2rem; }
+.pm-cat { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); font-weight: 600; }
+.pm-desc { color: var(--muted); white-space: pre-line; }
+.pm-price-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; margin-top: 4px; }
+.pm-price { font-size: 2rem; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; }
+.pm-old { color: var(--muted); font-size: 1.05rem; }
+.pm-save { background: #fde7e5; color: var(--danger); font-size: 0.78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+.pm-pay { color: var(--green); font-size: 0.92rem; }
+.pm-pay b { font-weight: 700; font-size: 1.05rem; }
+.pm-off { position: absolute; top: 14px; left: 14px; background: var(--danger); color: #fff; font-weight: 700; padding: 6px 12px; border-radius: 999px; font-size: 0.95rem; }
+.pm-main { position: relative; }
+.pm-info .wh { font-size: 0.85rem; }
+.pm-info .low-stock { font-size: 0.85rem; }
+.pm-buy { display: flex; gap: 10px; align-items: stretch; margin-top: 10px; background: #fff; }
+.pm-qty { display: flex; align-items: center; border: 1.5px solid var(--line); border-radius: 999px; overflow: hidden; }
+.pm-qty button { width: 40px; height: 100%; min-height: 48px; font-size: 1.2rem; }
+.pm-qty button:hover:not(:disabled) { background: var(--cream); }
+.pm-qty button:disabled { opacity: 0.35; cursor: not-allowed; }
+.pm-qty span { min-width: 30px; text-align: center; font-weight: 700; }
+.pm-add { flex: 1; padding: 14px 18px; font-size: 1rem; }
+.pm-wa { align-self: flex-start; font-size: 0.9rem; font-weight: 600; color: #1a8f48; text-decoration: underline; margin-top: 4px; }
+.pm-trust { list-style: none; margin: 8px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; font-size: 0.84rem; color: var(--muted); }
+
+/* Productos relacionados (ocupa todo el ancho, debajo) */
+.pm-more { grid-column: 1 / -1; padding: 22px 30px 28px; border-top: 1px solid var(--line); background: var(--paper); }
+.pm-more h3 { font-size: 1.5rem; margin-bottom: 14px; }
+.pm-more-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.pm-mini { text-align: left; display: flex; flex-direction: column; gap: 4px; }
+.pm-mini-img { aspect-ratio: 1; border-radius: 12px; overflow: hidden; display: grid; place-items: center; font-size: 2.4rem; background: linear-gradient(145deg, var(--cream), var(--cream-2)); }
+.pm-mini-img.green { background: linear-gradient(145deg, #e6e1d6, #d6cfc2); }
+.pm-mini-img.rose { background: linear-gradient(145deg, #f0e2cc, #e0c69f); }
+.pm-mini-img img { width: 100%; height: 100%; object-fit: cover; }
+.pm-mini-name { font-size: 0.85rem; font-weight: 600; line-height: 1.25; }
+.pm-mini-price { font-size: 0.85rem; color: var(--brown-d); font-weight: 700; }
+.pm-err { color: var(--danger); font-size: 0.88rem; min-height: 1.2em; }
+
+/* Opciones */
+.pm-opt { margin-top: 6px; }
+.pm-opt-name { display: block; font-size: 0.78rem; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+.pm-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pm-pill { padding: 8px 16px; border: 1.5px solid var(--line); border-radius: 999px; font-size: 0.88rem; font-weight: 500; background: #fff; transition: 0.15s; }
+.pm-pill:hover:not(:disabled) { border-color: var(--brown); }
+.pm-pill.on { border-color: var(--brown); background: var(--brown); color: #fff; }
+.pm-pill:disabled { opacity: 0.45; text-decoration: line-through; cursor: not-allowed; }
+
+@media (max-width: 720px) {
+  .pagina-prod { padding-top: 14px; }
+  .pm-box { grid-template-columns: 1fr; border-radius: 12px; }
+  .pm-info { padding: 22px 20px 26px; }
+  .pm-price { font-size: 1.8rem; }
+  /* En el celular, el botón de compra queda fijo abajo mientras se mira la ficha */
+  .pm-buy { position: sticky; bottom: 0; margin: 6px -20px 0; padding: 12px 20px; box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.08); z-index: 1; }
+  .pm-more { padding: 18px 20px 24px; }
+  .pm-more-grid { grid-template-columns: repeat(2, 1fr); }
+}

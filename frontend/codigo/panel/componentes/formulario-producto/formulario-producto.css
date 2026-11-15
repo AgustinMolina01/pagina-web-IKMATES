@@ -1,0 +1,14 @@
+/* Formulario de producto: fotos y variantes */
+.photos { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.photo { width: 96px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; text-align: center; }
+.photo img { width: 100%; height: 80px; object-fit: cover; display: block; }
+.photo .pb { display: flex; justify-content: space-between; padding: 4px; }
+.photo button { font-size: 0.72rem; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--line); background: #fff; }
+.photo .main { font-size: 0.7rem; background: var(--brown); color: #fff; padding: 2px 0; }
+.addphoto { width: 96px; height: 106px; border: 2px dashed var(--line); border-radius: 12px; display: grid; place-items: center; color: var(--muted); font-size: 0.8rem; cursor: pointer; text-align: center; }
+
+.grupo-op { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px 10px; margin-bottom: 10px; background: var(--paper); }
+.grupo-op input { margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; min-height: 8px; }
+.chip { padding: 5px 12px; border-radius: 999px; border: 1.5px solid var(--green); color: #2f4a1f; background: #eef4e6; font-size: 0.8rem; font-weight: 600; }
+.chip.off { border-color: #d9a7a2; color: #8c1d18; background: #fbeceb; text-decoration: line-through; }

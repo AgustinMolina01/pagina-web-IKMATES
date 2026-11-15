@@ -1,0 +1,15 @@
+<section class="tab" id="tab-pedidos">
+  <div class="guia"><b>Acá llegan los pedidos</b> que tus clientes mandan por WhatsApp.<ol><li>Los <b>nuevos</b> aparecen con un número rojo arriba.</li><li>Cuando lo resolvés, cambialo a <b>Atendido</b>.</li><li>Si la venta se cae, elegí <b>Cancelado</b>: el stock vuelve solo.</li></ol></div>
+  <div class="panel">
+    <h3>Pedidos</h3>
+    <div class="stats" id="ordStats"></div>
+    <div class="toolbar"><button class="btn btn-ghost btn-sm" id="ordRefresh">Actualizar</button></div>
+    <div class="card-list" id="ordList"></div>
+  </div>
+
+  <div class="panel">
+    <h3>Botón de arrepentimiento <span class="pill off hidden" id="arrBadge"></span></h3>
+    <p class="sub">Clientes que pidieron cancelar una compra. La tienda ya le mostró al cliente su código de solicitud. Escribile cuanto antes (dentro de las 24 hs) por WhatsApp o email para coordinar la devolución y, cuando lo resuelvas, marcala como resuelta.</p>
+    <div class="card-list" id="arrList"></div>
+  </div>
+</section>

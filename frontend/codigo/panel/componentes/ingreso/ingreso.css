@@ -1,0 +1,4 @@
+/* Pantalla de ingreso al panel */
+.login { max-width: 380px; margin: 12vh auto; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); text-align: center; }
+.login img { width: 80px; margin: 0 auto 12px; border-radius: 50%; }
+.login h1 { font-size: 2rem; margin-bottom: 18px; }

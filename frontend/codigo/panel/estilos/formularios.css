@@ -1,0 +1,22 @@
+/* Campos de formulario del panel */
+input, select, textarea {
+  width: 100%; padding: 11px 14px; border: 1px solid var(--line); border-radius: 10px;
+  font: inherit; background: #fff; margin-bottom: 12px; color: var(--ink);
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--brown); border-color: transparent; }
+input[type="checkbox"] { width: auto; margin: 0; }
+label { font-size: 0.82rem; font-weight: 600; color: var(--muted); display: block; margin-bottom: 4px; }
+
+.hint { font-size: 0.82rem; color: var(--muted); margin: -6px 0 12px; }
+.err { color: var(--danger); font-size: 0.88rem; min-height: 1.2em; margin-bottom: 8px; }
+.okmsg { color: var(--green); font-size: 0.88rem; font-weight: 600; }
+
+.chk { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.chk label { margin: 0; font-weight: 500; color: var(--ink); }
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+@media (max-width: 700px) {
+  .row2, .row3 { grid-template-columns: 1fr; }
+}

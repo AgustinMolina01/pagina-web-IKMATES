@@ -1,0 +1,31 @@
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito">
+  <div class="drawer-head"><h3>Tu pedido</h3><button id="closeCart" aria-label="Cerrar">✕</button></div>
+  <div class="drawer-body">
+    <div id="cartProgress"></div>
+    <div id="cartItems"></div>
+    <div id="cartChoices"></div>
+    <div class="cupon" id="cartCoupon" hidden>
+      <h4>¿Tenés un cupón de descuento?</h4>
+      <form class="cupon-row" id="couponForm">
+        <input id="couponInput" maxlength="30" placeholder="Ej: IKMATES10" autocomplete="off" aria-label="Código del cupón">
+        <button class="btn btn-ghost btn-sm" type="submit">Aplicar</button>
+      </form>
+      <p class="cupon-msg" id="couponMsg" role="status"></p>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <div id="cartSummary"></div>
+    <button class="btn btn-primary full" id="checkout">Enviar pedido por WhatsApp</button>
+    <p class="foot-trust">🔒 No se cobra nada ahora: confirmás el pedido por WhatsApp y coordinamos el pago y la entrega con vos.</p>
+    <div class="acct-tip" id="acctTip"></div>
+    <button class="link-btn" id="clearCart">Vaciar carrito</button>
+  </div>
+</aside>
+
+<!-- Barra fija en el celular: siempre a un toque de terminar la compra -->
+<button class="cart-bar" id="cartBar" hidden>
+  <span class="cart-bar-qty" id="cartBarQty">0</span>
+  <span class="cart-bar-text">Ver mi pedido</span>
+  <span class="cart-bar-total" id="cartBarTotal"></span>
+</button>

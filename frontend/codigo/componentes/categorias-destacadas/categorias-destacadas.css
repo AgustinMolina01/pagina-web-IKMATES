@@ -1,0 +1,29 @@
+/* "Comprá por categoría" */
+.cat-tiles-wrap { padding: 56px 0 8px; }
+.cat-tiles-title { text-align: center; font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom: 26px; }
+.cat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+
+.cat-tile {
+  position: relative; display: block; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden;
+  background: linear-gradient(145deg, var(--cream), var(--cream-2)); transition: transform 0.25s, box-shadow 0.25s;
+}
+.cat-tile.green { background: linear-gradient(145deg, #e6e1d6, #d6cfc2); }
+.cat-tile.rose { background: linear-gradient(145deg, #f0e2cc, #e0c69f); }
+.cat-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.cat-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.cat-tile:hover img { transform: scale(1.06); }
+.cat-tile-ico { position: absolute; inset: 0; display: grid; place-items: center; font-size: 3rem; padding-bottom: 26px; }
+.cat-tile-info {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 16px 14px; color: #fff; display: flex; flex-direction: column; line-height: 1.25;
+  background: linear-gradient(0deg, rgba(12, 12, 12, 0.82), rgba(12, 12, 12, 0));
+}
+.cat-tile-info strong { font-family: var(--serif-soft); font-size: 1.5rem; font-weight: 700; }
+.cat-tile-info small { font-size: 0.8rem; opacity: 0.9; }
+
+@media (max-width: 600px) {
+  .cat-tiles-wrap { padding-top: 36px; }
+  .cat-tiles { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .cat-tile { aspect-ratio: 4 / 3; }
+  .cat-tile-ico { font-size: 2.4rem; padding-bottom: 44px; }
+  .cat-tile-info strong { font-size: 1.2rem; }
+}

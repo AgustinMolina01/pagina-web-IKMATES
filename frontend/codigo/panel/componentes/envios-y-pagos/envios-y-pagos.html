@@ -1,0 +1,49 @@
+<section class="tab" id="tab-envios">
+  <div class="guia"><b>Lo que el cliente elige al finalizar la compra.</b><ol><li><b>Entrega:</b> poné cuánto cobrás. Vacío = "a coordinar", 0 = gratis.</li><li><b>Gratis desde</b> regala el envío a partir de un monto: ayuda a vender más. Para todo el país, marcá <b>"depende de la provincia"</b>.</li><li><b>Pago:</b> podés dar un descuento, ej: 10% por transferencia.</li></ol></div>
+  <div class="panel">
+    <h3>Formas de entrega</h3>
+    <form id="shForm">
+      <input type="hidden" id="shId">
+      <div class="row3">
+        <div><label>Nombre *</label><input id="shName" maxlength="60" placeholder="Ej: Envío a domicilio" required></div>
+        <div><label>Costo ($) — vacío = a coordinar</label><input id="shPrice" type="number" min="0" step="1" placeholder="0 = gratis"></div>
+        <div><label>Gratis desde ($, opcional)</label><input id="shFree" type="number" min="1" step="1" placeholder="ej: 50000"></div>
+      </div>
+      <div class="chk"><input type="checkbox" id="shByProv"><label for="shByProv"><b>El costo depende de la provincia</b> (para envíos a todo el país)</label></div>
+      <div id="shProvBox" class="hidden" style="margin:4px 0 14px">
+        <p class="hint" style="margin:0 0 8px">Poné cuánto cobrás a cada provincia. Las que dejes vacías quedan "a coordinar". El "Gratis desde" de arriba vale igual.</p>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px">
+          <input id="shProvFill" type="number" min="0" step="1" placeholder="Ej: 6000" style="width:140px;margin:0">
+          <button class="mini" type="button" id="shProvFillBtn">Poner este costo en las vacías</button>
+        </div>
+        <div id="shProvGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px 14px"></div>
+      </div>
+      <label>Descripción (opcional)</label>
+      <input id="shDesc" maxlength="200" placeholder="Ej: Retirás sin costo de 9 a 18 hs">
+      <div class="chk"><input type="checkbox" id="shAddress"><label for="shAddress">Pedir la dirección de entrega al cliente</label></div>
+      <div class="chk"><input type="checkbox" id="shActive" checked><label for="shActive">Disponible en la tienda</label></div>
+      <div class="err" id="shErr"></div>
+      <button class="btn btn-primary btn-sm" type="submit">Guardar forma de entrega</button>
+      <button class="btn btn-ghost btn-sm hidden" type="button" id="shCancel">Cancelar edición</button>
+    </form>
+    <div id="shList"></div>
+  </div>
+
+  <div class="panel">
+    <h3>Formas de pago</h3>
+    <p class="sub">El descuento se aplica a los productos, no al envío.</p>
+    <form id="pyForm">
+      <input type="hidden" id="pyId">
+      <div class="row3">
+        <div><label>Nombre *</label><input id="pyName" maxlength="60" placeholder="Ej: Transferencia bancaria" required></div>
+        <div><label>Descuento (%)</label><input id="pyDiscount" type="number" min="0" max="90" step="1" placeholder="0"></div>
+        <div><label>Descripción (opcional)</label><input id="pyDesc" maxlength="200" placeholder="Ej: Te pasamos los datos por WhatsApp"></div>
+      </div>
+      <div class="chk"><input type="checkbox" id="pyActive" checked><label for="pyActive">Disponible en la tienda</label></div>
+      <div class="err" id="pyErr"></div>
+      <button class="btn btn-primary btn-sm" type="submit">Guardar forma de pago</button>
+      <button class="btn btn-ghost btn-sm hidden" type="button" id="pyCancel">Cancelar edición</button>
+    </form>
+    <div id="pyList"></div>
+  </div>
+</section>

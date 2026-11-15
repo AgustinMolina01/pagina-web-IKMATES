@@ -1,0 +1,14 @@
+# Dependencias
+node_modules/
+
+# Lo que genera el armado del frontend
+frontend/armado/
+
+# Datos del negocio: NO se suben al repositorio (hacer respaldo aparte desde el panel)
+backend/datos/
+backend/fotos-subidas/
+
+# Secretos y archivos locales
+.env
+*.log
+.DS_Store

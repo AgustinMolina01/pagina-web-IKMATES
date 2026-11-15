@@ -1,0 +1,9 @@
+/* Campo de contraseña con botón "Ver / Ocultar" */
+.clave-wrap { position: relative; display: block; }
+.clave-wrap input { padding-right: 84px; }
+.clave-ojo {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; color: var(--brown-d);
+  background: var(--cream); line-height: 1.2;
+}
+.clave-ojo:hover { background: var(--cream-2); }

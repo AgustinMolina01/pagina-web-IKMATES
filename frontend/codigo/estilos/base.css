@@ -1,0 +1,20 @@
+/* Base común a la tienda y al panel: reinicio, tipografía y utilidades. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+[hidden] { display: none !important; }
+h1, h2, h3 { font-family: var(--serif-soft); line-height: 1.1; color: var(--brown-d); }
+
+.container { width: min(1180px, 100% - 40px); margin-inline: auto; }
+.hidden { display: none !important; }
+.no-scroll { overflow: hidden; }
+.muted { color: var(--muted); margin-bottom: 22px; }

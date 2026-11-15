@@ -1,0 +1,14 @@
+<section class="tab" id="tab-categorias">
+  <div class="guia"><b>Son los grupos del menú</b> de la tienda (Mates, Yerba, Combos…).<ol><li>Escribí el nombre.</li><li>Si es un tipo de otra (ej: Torpedo dentro de Mates), elegí en cuál va.</li><li>Ordenalas con las flechas. Con <b>Foto</b> elegís la imagen de "Comprá por categoría".</li></ol></div>
+  <div class="panel">
+    <h3>Categorías</h3>
+    <form id="cForm" style="display:flex;gap:10px;flex-wrap:wrap">
+      <input id="cName" maxlength="60" placeholder="Nombre de la nueva categoría" style="flex:1;min-width:200px;margin:0" required>
+      <select id="cParent" style="flex:1;min-width:200px;margin:0" aria-label="Dentro de"></select>
+      <button class="btn btn-primary btn-sm" type="submit">Crear categoría</button>
+    </form>
+    <div class="err" id="cErr"></div>
+    <div id="cList"></div>
+    <input type="file" id="cFile" accept="image/jpeg,image/png,image/webp" hidden>
+  </div>
+</section>
