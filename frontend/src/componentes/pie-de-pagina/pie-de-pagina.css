@@ -1,15 +1,42 @@
 /* Pie de página */
-.footer { background: var(--brown-d); color: var(--cream); padding: 30px 0; }
-.foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-.footer .brand { color: var(--cream); font-size: 1.3rem; }
-.footer p { font-size: 0.85rem; opacity: 0.8; }
+.footer { background: var(--brown-d); color: var(--paper); padding: 48px 0 20px; }
+.foot-grid {
+  display: grid; grid-template-columns: minmax(210px, 1.4fr) repeat(3, minmax(130px, 1fr));
+  gap: clamp(24px, 4vw, 58px); align-items: start;
+}
+.foot-brand { max-width: 310px; }
+.footer .foot-logo {
+  display: inline-block; color: var(--paper); font-family: var(--serif); font-size: 1.75rem;
+  font-weight: 700; font-style: italic; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.foot-brand p { max-width: 280px; margin: 12px 0 18px; }
+.footer h2 {
+  margin: 3px 0 8px; color: var(--paper); font-size: 0.72rem; font-weight: 700;
+  font-family: inherit; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.foot-column { display: grid; align-content: start; justify-items: start; gap: 11px; }
+.foot-links { display: grid; gap: 11px; }
+.footer p, .footer address, .footer .foot-column a:not(.boton-arrepentimiento) {
+  color: var(--paper); font-size: 0.82rem; line-height: 1.6; opacity: 0.82;
+}
+.footer .foot-column a:hover, .footer .legales a:hover, .footer .foot-logo:hover { color: var(--caramelo); opacity: 1; }
+.footer address { font-style: normal; }
 
-.socials { display: flex; gap: 14px; flex-wrap: wrap; }
-.socials a { font-size: 0.85rem; text-decoration: underline; opacity: 0.9; }
-.socials a:hover { opacity: 1; }
+.socials { display: flex; flex-wrap: wrap; gap: 10px; }
+.socials a {
+  display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid rgba(248, 247, 240, 0.38);
+  border-radius: 50%; color: var(--paper); opacity: 0.9; transition: color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+.socials a:hover { border-color: var(--caramelo); color: var(--caramelo); opacity: 1; }
+.socials svg { display: block; width: 16px; height: 16px; }
 
-.footer .legales a { text-decoration: underline; }
-.footer .legales a:hover { opacity: 1; }
+.foot-bottom {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 18px;
+  margin-top: 34px; padding-top: 18px; border-top: 1px solid rgba(248, 247, 240, 0.2);
+}
+.footer .legales { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.footer .legales a { color: var(--paper); font-size: 0.74rem; opacity: 0.78; text-decoration: underline; }
+.foot-bottom p { margin: 0; white-space: nowrap; font-size: 0.74rem; }
 
 /* Botón de arrepentimiento: la ley pide que sea visible y de acceso directo */
 .boton-arrepentimiento {
@@ -17,3 +44,22 @@
   font-weight: 600; font-size: 0.85rem; color: var(--cream); transition: background 0.2s, color 0.2s;
 }
 .boton-arrepentimiento:hover { background: var(--cream); color: var(--brown-d); }
+
+@media (max-width: 900px) {
+  .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 40px; }
+  .foot-brand { max-width: 360px; }
+}
+
+@media (max-width: 560px) {
+  .footer { padding-top: 36px; }
+  .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 20px; }
+  .foot-brand { grid-column: 1 / -1; max-width: none; }
+  .foot-brand p { max-width: 320px; }
+  .foot-bottom { flex-direction: column; margin-top: 28px; }
+  .foot-bottom p { white-space: normal; }
+}
+
+@media (max-width: 360px) {
+  .foot-grid { grid-template-columns: 1fr; }
+  .foot-brand { grid-column: auto; }
+}

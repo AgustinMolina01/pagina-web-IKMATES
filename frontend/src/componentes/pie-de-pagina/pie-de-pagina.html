@@ -1,11 +1,40 @@
 <footer class="footer">
-  <div class="container foot">
-    <div class="brand"><img src="/img/logo.png" alt=""><span>IK Mates</span></div>
-    <p><span data-s="hours">9 a 18 hs</span> · <span data-s="address">San Martín 1974, Rosario</span></p>
-    <div class="socials" id="socials"></div>
-    <!-- Obligatorio por ley: botón de arrepentimiento (Res. 424/2020) y acceso a Defensa del Consumidor -->
-    <p><a class="boton-arrepentimiento" href="/arrepentimiento">Botón de arrepentimiento</a></p>
-    <p class="legales"><a href="/privacidad">Política de privacidad</a> · <a href="/terminos">Términos y condiciones</a> · <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario" target="_blank" rel="noopener">Defensa de las y los consumidores. Para reclamos ingresá acá</a></p>
-    <p>© <span id="year"></span> IK Mates. Todos los derechos reservados.</p>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="foot-logo" href="/">IK Mates</a>
+        <p>Mates, yerba y combos para compartir la tradición argentina.</p>
+        <div class="socials" id="socials" aria-label="Redes sociales"></div>
+      </div>
+
+      <nav class="foot-column" aria-label="Tienda">
+        <h2>Tienda</h2>
+        <a href="/#productos">Toda la colección</a>
+        <div class="foot-links" id="footerCategories"></div>
+      </nav>
+
+      <nav class="foot-column" aria-label="Ayuda">
+        <h2>Ayuda</h2>
+        <a href="#preguntas">Preguntas frecuentes</a>
+        <a href="/terminos">Cambios y devoluciones</a>
+        <a class="boton-arrepentimiento" href="/arrepentimiento">Botón de arrepentimiento</a>
+      </nav>
+
+      <div class="foot-column foot-contact">
+        <h2>Contacto</h2>
+        <a id="footerWhatsapp" target="_blank" rel="noopener">WhatsApp <span id="footerWhatsappNumber"></span></a>
+        <p>Horario de atención<br><span data-s="hours">9 a 18 hs</span></p>
+        <address data-s="address">San Martín 1974, Rosario</address>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div class="legales">
+        <a href="/privacidad">Política de privacidad</a>
+        <a href="/terminos">Términos y condiciones</a>
+        <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario" target="_blank" rel="noopener">Defensa de las y los consumidores. Para reclamos ingresá acá</a>
+      </div>
+      <p>© <span id="year"></span> IK Mates. Todos los derechos reservados.</p>
+    </div>
   </div>
 </footer>

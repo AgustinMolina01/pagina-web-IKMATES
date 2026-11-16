@@ -271,6 +271,10 @@ test("novedades: 'Quiénes somos' y preguntas editables, pie legal y cupón en e
   assert.equal(P.todos("#aboutValues li").length, 2);
   assert.equal(P.d.querySelector("#preguntas").hidden, false, "las preguntas base se muestran");
   assert.ok(P.todos("#faqList details").length >= 3);
+  assert.equal(P.d.querySelector("footer .foot-brand img"), null, "el pie usa el nombre de la marca sin imagen");
+  assert.ok(P.d.querySelector('footer nav[aria-label="Tienda"] a[href="/categoria/mates"]'), "el pie enlaza las categorías disponibles");
+  assert.equal(P.d.querySelector("#footerWhatsappNumber").textContent, "+54 9 341 214-7956");
+  assert.ok(P.d.querySelector('footer #socials a[aria-label="WhatsApp"]'));
   assert.ok(P.d.querySelector('footer a[href="/arrepentimiento"]'), "botón de arrepentimiento en el pie");
   assert.ok(P.d.querySelector('footer a[href*="defensadelconsumidor"]'), "link a Defensa del Consumidor");
 
