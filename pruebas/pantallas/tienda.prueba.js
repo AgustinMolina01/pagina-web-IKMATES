@@ -250,6 +250,9 @@ test("sin conexión con el servidor: muestra barra, carrusel y datos por defecto
     "/img/banner-cybermonday.png",
     "/img/banner-2x1.png",
   ]);
+  assert.deepEqual([...P.d.querySelectorAll(".slide h2")].map((heading) => heading.textContent), ["Cyber Monday", "Promoción 2x1"]);
+  assert.equal(P.d.querySelector(".slide-action-primary").getAttribute("href"), "/categoria/mates");
+  assert.equal(P.d.querySelector(".slide-action-secondary").getAttribute("href"), "#productos");
   assert.equal(P.d.querySelector("#waNum").textContent, "+54 9 341 214-7956");
   assert.equal(P.d.querySelector("#aboutTitle").textContent, "Pasión por el mate", "'Quiénes somos' conserva el texto base");
   assert.match(P.d.querySelector("#productos").textContent, /Próximamente/);
@@ -273,7 +276,7 @@ test("novedades: 'Quiénes somos' y preguntas editables, pie legal y cupón en e
   assert.ok(P.todos("#faqList details").length >= 3);
   assert.equal(P.d.querySelector("footer .foot-brand img"), null, "el pie usa el nombre de la marca sin imagen");
   assert.ok(P.d.querySelector('footer nav[aria-label="Tienda"] a[href="/categoria/mates"]'), "el pie enlaza las categorías disponibles");
-  assert.equal(P.d.querySelector("#footerWhatsappNumber").textContent, "+54 9 341 214-7956");
+  assert.equal(P.d.querySelector("#footerWhatsappNumber").textContent, "+54 9 341 555-1234");
   assert.ok(P.d.querySelector('footer #socials a[aria-label="WhatsApp"]'));
   assert.ok(P.d.querySelector('footer a[href="/arrepentimiento"]'), "botón de arrepentimiento en el pie");
   assert.ok(P.d.querySelector('footer a[href*="defensadelconsumidor"]'), "link a Defensa del Consumidor");

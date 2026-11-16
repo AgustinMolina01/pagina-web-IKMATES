@@ -26,8 +26,21 @@ function render() {
   if (!count) { slider.hidden = true; return; }
   $("#slides").innerHTML = list
     .map((b) => {
-      const img = `<img src="${esc(b.image)}" alt="${esc(b.title || "Publicación IK Mates")}">`;
-      return /^(https?:\/\/|#|\/)/i.test(b.link || "") ? `<a class="slide" href="${esc(destino(b.link))}">${img}</a>` : `<div class="slide">${img}</div>`;
+      const title = b.title || "Mates para acompañarte siempre";
+      const link = destino(b.link);
+      const href = /^(https?:\/\/|#|\/)/i.test(link || "") ? link : "#productos";
+      return `<article class="slide">
+        <img src="${esc(b.image)}" alt="" aria-hidden="true">
+        <div class="slide-content">
+          <p class="slide-kicker">IK Mates · Tradición para compartir</p>
+          <h2>${esc(title)}</h2>
+          <p class="slide-description">Mates, yerba y combos elegidos para acompañarte todos los días.</p>
+          <div class="slide-actions">
+            <a class="slide-action slide-action-primary" href="${esc(href)}">VER OFERTA</a>
+            <a class="slide-action slide-action-secondary" href="#productos">VER COLECCIÓN</a>
+          </div>
+        </div>
+      </article>`;
     })
     .join("");
   $("#dots").innerHTML = list.map((_, n) => `<button aria-label="Ir a la publicación ${n + 1}"></button>`).join("");
