@@ -138,7 +138,7 @@ test("'Quiénes somos' y preguntas frecuentes vienen con texto base, se editan y
   const s2 = (await shop.get("/api/settings")).data;
   assert.equal(s2.aboutTitle, "Nuestra historia");
   assert.equal(s2.aboutValues, "Envíos: A todo el país");
-  assert.equal(s2.faqText, "", "sin preguntas, la sección no se muestra");
+  assert.equal(s2.faqText, "", "se conserva vacío el texto editable sin borrar las preguntas automáticas de compra");
 
   await admin.put("/api/admin/settings", { aboutTitle: "" });
   assert.equal((await shop.get("/api/settings")).data.aboutTitle, "Pasión por el mate", "título vacío vuelve al base");

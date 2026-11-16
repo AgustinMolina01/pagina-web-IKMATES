@@ -44,18 +44,41 @@ test("la tienda carga sin errores y muestra destacados, mayorista, agotados y po
   P.cerrar();
 });
 
-test("datos del negocio editables: WhatsApp, horario, redes y 'Cómo comprar'", async () => {
+test("datos editables: WhatsApp, horario, redes e información de compra en preguntas frecuentes", async () => {
   const P = await abrir(srv.base, "/");
   assert.equal(P.d.querySelector("#waNum").textContent, "+54 9 341 555-1234");
   assert.match(P.d.querySelector("#waFloat").href, /5493415551234/);
   assert.equal(P.d.querySelector(".strip [data-s=hours]").textContent, "Te asesoramos de 10 a 19 hs");
   assert.ok(P.todos("#socials a").some((a) => a.href === "https://instagram.com/ikmates"));
-  const cuadros = P.d.querySelector("#infoCards").textContent;
-  assert.match(cuadros, /Transferencia bancaria — 10% de descuento/, "las formas de pago configuradas aparecen solas");
-  assert.match(cuadros, /Envío a domicilio — \$1\.500/);
-  assert.match(cuadros, /Aceptamos tarjetas/);
-  assert.match(cuadros, /Por mayor consultá/);
+  const faq = P.d.querySelector("#faqList").textContent;
+  assert.match(faq, /¿Cómo hago un pedido\?/, "se conserva la información sobre cómo comprar");
+  assert.match(faq, /Transferencia bancaria — 10% de descuento/, "las formas de pago configuradas aparecen en las preguntas frecuentes");
+  assert.match(faq, /Envío a domicilio — \$1\.500/);
+  assert.match(faq, /Aceptamos tarjetas/);
+  assert.match(faq, /Por mayor consultá/);
+  const preguntas = P.todos("#faqList summary").map((el) => el.textContent);
+  assert.equal(preguntas.filter((p) => p === "¿Cómo hago un pedido?").length, 1);
+  assert.equal(preguntas.filter((p) => p === "¿Hacen envíos a todo el país?").length, 1);
+  assert.equal(preguntas.filter((p) => p === "¿Venden por mayor?").length, 1);
+  assert.equal(P.d.querySelector("#comocomprar"), null, "la sección Cómo comprar se retiró de la portada");
+  assert.equal(P.d.querySelector("#infoCards"), null);
+  assert.equal(P.d.querySelector('a[href="#comocomprar"]'), null, "se quitó el enlace del menú");
   P.cerrar();
+});
+
+test("las preguntas automáticas de compra siguen visibles si se vacían las preguntas editables", async () => {
+  const settings = (await admin.get("/api/site")).data.settings;
+  let P;
+  await admin.put("/api/admin/settings", { faqText: "" });
+  try {
+    P = await abrir(srv.base, "/");
+    assert.equal(P.d.querySelector("#preguntas").hidden, false);
+    assert.ok(P.todos("#faqList summary").some((el) => el.textContent === "¿Cómo hago un pedido?"));
+    assert.match(P.d.querySelector("#faqList").textContent, /Transferencia bancaria — 10% de descuento/);
+  } finally {
+    if (P) P.cerrar();
+    await admin.put("/api/admin/settings", { faqText: settings.faqText });
+  }
 });
 
 test("ficha de producto: galería, descripción y condición mayorista", async () => {

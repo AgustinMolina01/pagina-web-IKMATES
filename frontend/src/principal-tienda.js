@@ -17,7 +17,6 @@ import { initBannerSlider } from "./componentes/carrusel/carrusel.js";
 import { initCatalog } from "./componentes/catalogo/catalogo.js";
 import { initProductPage } from "./componentes/ficha-producto/ficha-producto.js";
 import { initCategoryPage } from "./componentes/pagina-categoria/pagina-categoria.js";
-import { initHowToBuy } from "./componentes/como-comprar/como-comprar.js";
 import { initAbout } from "./componentes/nosotros/nosotros.js";
 import { initFaq } from "./componentes/preguntas-frecuentes/preguntas-frecuentes.js";
 import { initContact } from "./componentes/contacto/contacto.js";
@@ -36,7 +35,7 @@ import { iniciarNavegacion } from "./servicios/navegacion.servicio.js";
 
 // Cada componente se engancha a los avisos (eventos) que le interesan
 [initAnnounceBar, initSiteHeader, initMegaMenu, initBenefits, initBannerSlider, initCategoryTiles, initCatalog, initCategoryPage, initProductPage,
-  initHowToBuy, initAbout, initFaq, initContact, initSiteFooter, initWhatsappFloat, initCart, initAccount].forEach((iniciar) => iniciar());
+  initAbout, initFaq, initContact, initSiteFooter, initWhatsappFloat, initCart, initAccount].forEach((iniciar) => iniciar());
 
 // Primera pantalla con los valores por defecto, y después los datos reales
 iniciarNavegacion(); // muestra la página de la dirección actual (inicio, categoría o producto)

@@ -20,7 +20,7 @@ const DEFAULTS = {
   aboutTitle: "Pasión por el mate",
   aboutText: "En IK Mates creemos que compartir un mate es compartir tiempo. Seleccionamos cada producto para que dure, se vea bien y se disfrute desde el primer cebado.\n\nTrabajamos con atención directa: te asesoramos, armamos tu combo a medida y coordinamos el envío.",
   aboutValues: "Calidad: Productos elegidos uno por uno.\nAsesoramiento: Te ayudamos a elegir el mate ideal.\nRegalos: Combos listos para sorprender.",
-  // Preguntas frecuentes: "## Pregunta" y debajo la respuesta. Vacío = no se muestra la sección.
+  // Preguntas editables que complementan la información automática de compra.
   faqText: PREGUNTAS,
   privacyText: PRIVACIDAD,
   termsText: TERMINOS,
