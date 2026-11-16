@@ -10,7 +10,7 @@ const hoy = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.
 const fecha = (s) => s.split("-").reverse().join("/");
 
 // ---------- Publicaciones (carrusel) ----------
-const miniatura = () => { $("#bThumb").innerHTML = imagen ? `<img src="${esc(imagen)}" style="width:100%;height:100%;object-fit:cover" alt="">` : "🖼️"; };
+const miniatura = () => { $("#bThumb").innerHTML = imagen ? `<img src="${esc(imagen)}" style="width:100%;height:100%;object-fit:contain;background:var(--cream-2)" alt="">` : "🖼️"; };
 
 async function cargarBanners() {
   banners = await get("/api/admin/banners");
@@ -22,7 +22,7 @@ async function cargarBanners() {
           : b.end_date && b.end_date < t ? `<span class="pill off">Vencida el ${fecha(b.end_date)}</span>`
           : `<span class="pill green">En vigencia${b.end_date ? " hasta " + fecha(b.end_date) : ""}</span>`;
         return `<div style="border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff">
-          <img src="${esc(b.image)}" alt="" style="width:100%;aspect-ratio:21/8;object-fit:cover;display:block">
+          <img src="${esc(b.image)}" alt="" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--cream-2);display:block">
           <div style="padding:10px" class="acts">${estado}<div style="margin-top:8px"><button data-bedit="${b.id}">Editar</button><button class="del" data-bdel="${b.id}">Eliminar</button></div></div></div>`;
       }).join("")
     : `<p class="hint">Todavía no hay publicaciones.</p>`;

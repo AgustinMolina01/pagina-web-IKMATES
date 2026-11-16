@@ -6,9 +6,8 @@ import { setSettings } from "./ajustes.servicio.js";
 
 const OFFLINE_ANNOUNCEMENTS = ["ENVÍOS A TODO EL PAÍS", "COMBOS LISTOS PARA REGALAR", "PEDÍ POR WHATSAPP Y TE ASESORAMOS"];
 const OFFLINE_BANNERS = [
-  { image: "/img/banner-combos.svg", title: "Combos", link: "/categoria/combos" },
-  { image: "/img/banner-yerba.svg", title: "Yerba", link: "/categoria/yerba" },
-  { image: "/img/banner-mates.svg", title: "Mates", link: "/categoria/mates" },
+  { image: "/img/banner-cybermonday.png", title: "Cyber Monday", link: "#mates" },
+  { image: "/img/banner-2x1.png", title: "Promoción 2x1", link: "#mates" },
 ];
 
 /** Portada: categorías, ajustes, banners, mensajes, envíos y pagos. Sin servidor, usa valores por defecto. */

@@ -223,6 +223,10 @@ test("sin conexión con el servidor: muestra barra, carrusel y datos por defecto
   const P = await abrir(srv.base, "/", { sinServidor: true });
   assert.equal(P.d.querySelector("#announce").hidden, false);
   assert.equal(P.d.querySelector("#slider").hidden, false);
+  assert.deepEqual([...P.d.querySelectorAll("#slides img")].map((img) => img.getAttribute("src")), [
+    "/img/banner-cybermonday.png",
+    "/img/banner-2x1.png",
+  ]);
   assert.equal(P.d.querySelector("#waNum").textContent, "+54 9 341 214-7956");
   assert.equal(P.d.querySelector("#aboutTitle").textContent, "Pasión por el mate", "'Quiénes somos' conserva el texto base");
   assert.match(P.d.querySelector("#productos").textContent, /Próximamente/);

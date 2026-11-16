@@ -181,7 +181,11 @@ test("categorías: crear una subcategoría y verla en los selectores", async () 
 
 test("publicaciones: carrusel con vigencia y mensajes de la barra", async () => {
   await pestana("publicaciones");
-  assert.ok(P.todos("#bList > div").length >= 3);
+  assert.equal(P.todos("#bList > div").length, 2);
+  assert.deepEqual(P.todos("#bList img").map((img) => img.getAttribute("src")), [
+    "/img/banner-cybermonday.png",
+    "/img/banner-2x1.png",
+  ]);
   assert.match(P.d.querySelector("#bList").textContent, /En vigencia/);
   marcar("#aText", "PROMO PANEL"); P.d.querySelector("#aForm").dispatchEvent(P.evento("submit")); await esperar(700);
   assert.match(P.d.querySelector("#aList").textContent, /PROMO PANEL/);

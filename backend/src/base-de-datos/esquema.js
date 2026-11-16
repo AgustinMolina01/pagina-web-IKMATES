@@ -122,9 +122,18 @@ function seed() {
       .forEach((c, i) => exec("INSERT INTO categories(slug,name,sort) VALUES(?,?,?)", [c[0], c[1], i + 1]));
   }
   if (!getMeta("banners_seeded")) {
-    [["/img/banner-combos.svg", "Combos", "#combos"], ["/img/banner-yerba.svg", "Yerba", "#yerba"], ["/img/banner-mates.svg", "Mates", "#mates"]]
+    [["/img/banner-2x1.png", "Promoción 2x1", "#mates"], ["/img/banner-cybermonday.png", "Cyber Monday", "#mates"]]
       .forEach((b) => exec("INSERT INTO banners(image,title,link) VALUES(?,?,?)", b));
     setMeta("banners_seeded", "1");
+  }
+  if (!getMeta("promo_banners_migrated")) {
+    const anteriores = ["/img/banner-combos.svg", "/img/banner-yerba.svg", "/img/banner-mates.svg"];
+    if (one("SELECT COUNT(*) AS n FROM banners WHERE image IN (?,?,?)", anteriores).n) {
+      exec("DELETE FROM banners WHERE image IN (?,?,?)", anteriores);
+      [["/img/banner-2x1.png", "Promoción 2x1", "#mates"], ["/img/banner-cybermonday.png", "Cyber Monday", "#mates"]]
+        .forEach((b) => exec("INSERT INTO banners(image,title,link) VALUES(?,?,?)", b));
+    }
+    setMeta("promo_banners_migrated", "1");
   }
   if (one("SELECT COUNT(*) AS n FROM announcements").n === 0) {
     ["ENVÍOS A TODO EL PAÍS", "COMBOS LISTOS PARA REGALAR", "PEDÍ POR WHATSAPP Y TE ASESORAMOS"]
