@@ -230,6 +230,11 @@ test("sin conexión con el servidor: muestra barra, carrusel y datos por defecto
   assert.equal(P.d.querySelector("#waNum").textContent, "+54 9 341 214-7956");
   assert.equal(P.d.querySelector("#aboutTitle").textContent, "Pasión por el mate", "'Quiénes somos' conserva el texto base");
   assert.match(P.d.querySelector("#productos").textContent, /Próximamente/);
+  P.w.innerWidth = 390;
+  P.w.dispatchEvent(new P.w.Event("resize"));
+  await esperar(160);
+  assert.ok(P.d.querySelector("#announceTrack").classList.contains("announce-mobile"));
+  assert.equal(P.todos("#announceTrack span").length, 1, "en móvil se muestra un mensaje completo por vez");
   assert.deepEqual(P.errores, []);
   P.cerrar();
 });
